@@ -489,5 +489,30 @@ nav.nav-tabs {
   text-align: justify;
 }
 
+.card-img-top {
+  object-fit: cover;
+  height: 240px;
+}
+
+
+.organizer-card .card-title {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.organizer-card .organizer-text {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.organizer-card {
+  transition: transform 0.2s ease;
+}
+
+.organizer-card:hover {
+  transform: translateY(-4px);
+}
 
 
