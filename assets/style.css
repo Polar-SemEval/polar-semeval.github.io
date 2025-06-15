@@ -516,3 +516,39 @@ nav.nav-tabs {
 }
 
 
+.organizer-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.organizer-card:hover {
+  transform: translateY(-5px);
+}
+
+.organizer-img {
+  height: 260px;
+  object-fit: cover;
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.organizer-text {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
