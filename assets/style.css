@@ -86,7 +86,7 @@ footer {
 }
 
 .hero-section {
-  background: linear-gradient(135deg, #368a94, #689fb0);
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
   height: 60vh;
   position: relative;
   display: flex;
@@ -269,9 +269,10 @@ nav.nav-tabs {
 }
 .polar-info-section {
   padding: 2rem 1rem;
-  background-color: #ffffff;
+  background:  #ffeef9;
   font-family: 'Segoe UI', sans-serif;
 }
+
 
 .polar-info-section .container {
   max-width: 1200px;
@@ -286,18 +287,19 @@ nav.nav-tabs {
 }
 
 .polar-info-section .col {
-  background-color: #f9fafb;
+  background: linear-gradient(135deg, #ffffff, #f0f4f8);
+  border-top: 4px solid #5A8DEE;
   border-radius: 12px;
   padding: 1.5rem 1rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  flex: 1 1 30%;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .polar-info-section .col:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(90, 141, 238, 0.2);
 }
+
 
 .polar-info-section .text--center {
   text-align: center;
@@ -391,26 +393,30 @@ nav.nav-tabs {
 
 /* Footer Style */
 .footer-section {
-  background-color: #1e293b;
-  color: #cbd5e1;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #ffffff; /* White text to contrast nicely */
   padding: 2rem 1rem;
   text-align: center;
 }
 
+
 .footer-section .footer-container p {
   margin: 0.3rem 0;
   font-size: 0.95rem;
+  color: #9644a4; /* Darling purple */
 }
 
 
+
 .cta-section .card {
-  background: linear-gradient(135deg, #a8edea, #fed6e3); /* pastel aqua + blush pink */
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee); /* soft pink + soft blue */
   border: none;
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 5px;
   min-height: 30px; /* smaller card height */
 }
+
 
 .cta-section .card:hover {
   transform: translateY(-4px);
