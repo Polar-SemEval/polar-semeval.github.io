@@ -564,18 +564,3 @@ nav.nav-tabs {
   margin-right: auto;
 }
 
-img, figure, .figure, .card-img-top {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.figure-img-limit {
-  max-width: 800px;   
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
