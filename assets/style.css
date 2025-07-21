@@ -558,3 +558,9 @@ nav.nav-tabs {
   font-size: 1rem;
   font-weight: 600;
 }
+.content-wrapper {
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
