@@ -564,3 +564,19 @@ nav.nav-tabs {
   margin-right: auto;
 }
 
+.card {
+  border-radius: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+.btn-purple {
+  background-color: #8a6cc3;
+  color: white;
+}
+.btn-purple:hover {
+  background-color: #5a32a3;
+  color: white;
+}
