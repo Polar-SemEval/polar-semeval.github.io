@@ -9,137 +9,105 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/style.css"/>
-<style>
-  body {
-    background: #f8fafc;
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-    font-size: 1.16rem;
-    line-height: 1.72;
-    color: #222;
-  }
-  .nav-tabs {
-    font-size: 1.18rem;
-  }
-  .nav-tabs .nav-link {
-    padding: 0.8rem 2rem;
-    font-weight: 500;
-    color: #233871;
-  }
-  .nav-tabs .nav-link.active {
-    font-weight: 700;
-    background: #e6ecfe;
-    color: #3366cc !important;
-    border-bottom: 2.5px solid #3366cc;
-  }
-
-  .the-task {
-    margin-top: 2.3rem;
-  }
-  .the-task .container {
-    max-width: 800px;
-    background: #fff;
-    padding: 2.5rem 2.2rem 2.6rem 2.2rem;
-    border-radius: 1.2rem;
-    box-shadow: 0 2px 18px 0 rgba(34,54,85,0.08), 0 2px 12px 0 rgba(80,100,140,0.07);
-  }
-  .the-task h2 {
-    color: #3366cc;
-    font-weight: 800;
-    font-size: 2.35rem;
-    letter-spacing: 0.35px;
-    margin-top: 0.2em;
-    margin-bottom: 1.3em;
-    text-align: center;
-  }
-  .the-task h3 {
-    color: #3366cc;
-    font-weight: 700;
-    margin-top: 2em;
-    margin-bottom: 1.1em;
-    font-size: 1.48rem;
-    letter-spacing: 0.1px;
-  }
-  .the-task p, .the-task li, .the-task ol, .the-task ul {
-    font-size: 1.10rem;
-  }
-  .the-task li {
-    margin-bottom: .56em;
-  }
-
-  /* Badge and highlight improvements */
-  .badge {
-    font-size: 1em;
-    font-weight: 500;
-    margin-right: 0.25em;
-  }
-  .the-task li span[style*="background-color"] {
-    padding: 0.18em 0.7em;
-    border-radius: 0.33em;
-    font-size: 0.99em;
-    display: inline-block;
-    margin-top: 0.21em;
-    font-weight: 500;
-  }
-
-  .key-highlight {
-    background: #e5f4ff;
-    border-left: 4px solid #3366cc;
-    padding: 1.1em;
-    border-radius: 0.5em;
-    margin-bottom: 1.5em;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,.03);
-    font-size: 1.13rem;
-  }
-
-  .lang-list li {
-    margin-bottom: .3em;
-    font-size: 1.09rem;
-  }
-
-  /* Make bootstrap alerts a little thicker for this site */
-  .alert {
-    font-size: 1.1rem;
-    border-width: 2px;
-    padding-top: 1.04em;
-    padding-bottom: 1.04em;
-  }
-
-  .timeline {
-    font-size: 1.09rem;
-  }
-
-  /* Responsive design for smaller screens */
-  @media (max-width: 600px) {
-    .the-task .container {
-      padding: 1.1rem 0.3rem 1.5rem 0.3rem;
-      max-width: 100%;
-      border-radius: 0.6rem;
+  <style>
+    body {
+      background: #f8fafc;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      font-size: 1.16rem;
+      line-height: 1.72;
+      color: #222;
     }
-    .the-task h2 { font-size: 1.38rem; }
-    .the-task h3 { font-size: 1.14rem; }
-    .footer-section { font-size: 1.08rem; }
-    .nav-tabs { font-size: 1.02rem; }
-    .nav-tabs .nav-link { padding: 0.5rem 1rem; }
-  }
-
-  .footer-section {
-    background: #233871;
-    color: #fff;
-    padding: 2.1em 0 1.2em 0;
-    margin-top: 2em;
-    font-size: 1.14rem;
-    letter-spacing: 0.02em;
-  }
-  .footer-section a {
-    color: #90e0ef;
-    text-decoration: underline;
-  }
-  .footer-section img {
-    filter: drop-shadow(0 2px 6px #334);
-    margin-top: 0.6em;
-    margin-bottom: 1.1em;
-  }
-</style>
+    .nav-tabs {
+      font-size: 1.18rem;
+    }
+    .nav-tabs .nav-link {
+      padding: 0.8rem 2rem;
+      font-weight: 500;
+      color: #233871;
+    }
+    .nav-tabs .nav-link.active {
+      font-weight: 700;
+      background: #e6ecfe;
+      color: #3366cc !important;
+      border-bottom: 2.5px solid #3366cc;
+    }
+    .the-task {
+      margin-top: 2.3rem;
+    }
+    .the-task .container {
+      max-width: 800px;
+      background: #fff;
+      padding: 2.5rem 2.2rem 2.6rem 2.2rem;
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 18px 0 rgba(34,54,85,0.08), 0 2px 12px 0 rgba(80,100,140,0.07);
+    }
+    .the-task h2 {
+      color: #3366cc;
+      font-weight: 800;
+      font-size: 2.1rem;
+      letter-spacing: 0.35px;
+      margin-top: 0.2em;
+      margin-bottom: 1.3em;
+      text-align: center;
+    }
+    .the-task h3 {
+      color: #3366cc;
+      font-weight: 700;
+      margin-top: 2em;
+      margin-bottom: 1.1em;
+      font-size: 1.35rem;
+      letter-spacing: 0.1px;
+    }
+    .the-task li {
+      margin-bottom: .56em;
+      font-size: 1.08rem;
+    }
+    .badge {
+      font-size: 1em;
+      font-weight: 500;
+      margin-right: 0.25em;
+    }
+    .the-task li span[style*="background-color"] {
+      padding: 0.18em 0.7em;
+      border-radius: 0.33em;
+      font-size: 0.99em;
+      display: inline-block;
+      margin-top: 0.21em;
+      font-weight: 500;
+    }
+    .footer-section {
+      background: #233871;
+      color: #fff;
+      padding: 2.1em 0 1.2em 0;
+      margin-top: 2em;
+      font-size: 1.14rem;
+      letter-spacing: 0.02em;
+    }
+    .footer-section a {
+      color: #90e0ef;
+      text-decoration: underline;
+    }
+    .footer-section img {
+      filter: drop-shadow(0 2px 6px #334);
+      margin-top: 0.6em;
+      margin-bottom: 1.1em;
+    }
+    .footer-container p {
+      margin-bottom: 0.3em;
+    }
+    @media (max-width: 600px) {
+      .the-task .container {
+        padding: 1.1rem 0.3rem 1.5rem 0.3rem;
+        max-width: 100%;
+        border-radius: 0.6rem;
+      }
+      .the-task h2 { font-size: 1.38rem; }
+      .the-task h3 { font-size: 1.14rem; }
+      .footer-section { font-size: 1.08rem; }
+      .nav-tabs { font-size: 1.02rem; }
+      .nav-tabs .nav-link { padding: 0.5rem 1rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -151,108 +119,83 @@
 </nav>
 
 <!-- MAIN CONTENT -->
-<section class="the-task" style="margin-top: 2.3rem;">
+<section class="the-task">
   <div class="container">
     <h2 class="mb-4 text-center"><i class="bi bi-lightning-charge-fill text-warning"></i> The Task</h2>
 
-    <div class="key-highlight">
-      <strong><i class="bi bi-asterisk text-danger"></i> Polarization</strong> is the division of opinions into sharply contrasting groups, often with hostility or exclusion. In the digital era it’s rising—a challenge we must address. <b>P↔L↔R Task @ SemEval 2026</b> is the first initiative focused on computational approaches to detecting and interpreting polarization worldwide.
-    </div>
+    <p>Polarization refers to the division of opinions into two sharply contrasting groups, often accompanied by hostility, intolerance, or exclusion. In today's digital era, polarization is intensifying across platforms and geographies, influencing public discourse, exacerbating conflicts, and contributing to societal fragmentation.</p>
 
-    <p>This shared task brings together researchers and practitioners to build models that detect and analyze polarization across languages, cultures, and events—advancing both technology and social understanding.</p>
+    <p>This shared task is the first SemEval initiative focused on polarization, aiming to advance the computational understanding of how polarization manifests in text across multiple languages, cultures, and event types. Participants will develop models capable of detecting and interpreting polarization in a variety of online contexts.</p>
+    
+    <p>The task centers on textual data collected from real-world events such as elections, international conflicts, social protests, and ideological debates. The primary goal is to evaluate systems’ ability to identify polarized content and classify its targets.</p>
 
-    <div class="alert alert-info mt-4 mb-4 shadow-sm">
-      <strong><i class="bi bi-globe2"></i> Scope:</strong>
-      <ul class="mb-0">
-        <li>Multilingual (10+ languages, incl. mid/low-resource & Global South)</li>
-        <li>Multicultural & event-driven: elections, conflicts, protests, social debates</li>
-        <li>Real online discourse: news, forums, Reddit, Bluesky, blogs</li>
-      </ul>
-    </div>
-
-    <h3 class="mt-5"><i class="bi bi-translate"></i> Languages</h3>
+    <h3><i class="bi bi-translate"></i> Multilingual, Multicultural, and Multievent Scope</h3>
+    <p>To promote global inclusivity and cross-cultural representation, the dataset encompasses multiple languages, including many mid/low-resource and underrepresented ones in mainstream NLP research.</p>
     <ul class="lang-list">
-      <li><span class="badge bg-success">Annotated</span>
-        <span style="background-color:#D6FFD6;"> English, German, Spanish, Arabic, Urdu, Amharic, Hausa</span></li>
-      <li><span class="badge bg-warning text-dark">New</span>
-        <span style="background-color:#FFF8DC;"> Turkish, Italian, Burmese, Chinese</span></li>
-      <li><span class="badge bg-info text-dark">Extensions</span>
-        <span style="background-color:#CCFFFF;"> Mozambican Portuguese, Kinyarwanda, Igbo, Twi, Swahili, isiXhosa, Zulu, Emakhuwa</span></li>
+      <li><b>Already collected and annotated:</b>
+        <span style="background-color:#D6FFD6;">English, German, Spanish, Arabic, Urdu, Amharic, Hausa</span>
+      </li>
+      <li><b>New languages:</b>
+        <span style="background-color:#FFF8DC;">Turkish, Italian, Burmese, Chinese</span>
+      </li>
+      <li><b>Possible extensions:</b>
+        <span style="background-color:#CCFFFF;">Mozambican Portuguese, Kinyarwanda, Igbo, Twi, Swahili, isiXhosa, Zulu, Emakhuwa</span>
+      </li>
     </ul>
 
-    <h3 class="mt-5"><i class="bi bi-diagram-3"></i> Task Format & Subtasks</h3>
+    <h3><i class="bi bi-diagram-3"></i> Task Format and Subtasks</h3>
+    <p>Participants may choose to compete in one or more of three subtasks:</p>
     <ol>
-      <li><b>Polarization Detection</b> <span class="badge bg-primary">Subtask 1</span> — Binary: Is text polarized?</li>
-      <li><b>Polarization Type</b> <span class="badge bg-secondary">Subtask 2</span> — Classify the <u>target</u> (political, religious, ethnic, gender/sexuality, or other).</li>
-      <li><b>Manifestation Identification</b> <span class="badge bg-info text-dark">Subtask 3</span> — Classify <u>how</u> polarization is expressed (stereotyping, vilification, extreme language, etc; multi-label).</li>
+      <li><strong>Subtask 1: Polarization Detection</strong> – Binary classification to determine whether a post contains polarized content (Polarized or Not Polarized).</li>
+      <li><strong>Subtask 2: Polarization Type Classification</strong> – Identify the target of polarization, including political groups, religious groups, racial/ethnic communities, gender identities, sexual orientations, or other domain-specific targets.</li>
+      <li><strong>Subtask 3: Manifestation Identification</strong> – Classify how polarization is expressed; multiple labels possible, such as stereotyping, vilification, dehumanization, deindividuation, extreme language, lack of empathy, invalidation.</li>
     </ol>
 
-    <h3 class="mt-5"><i class="bi bi-database-fill"></i> Data Description</h3>
+    <h3><i class="bi bi-database-fill"></i> Data Description</h3>
+    <p>The dataset is sourced from news websites, Reddit, blogs, Bluesky, and regional forums, covering event types like elections, conflicts, gender rights, migration, and more. Each language includes between 3,000 and 5,000 annotated instances.</p>
+
+    <p>Annotation tools used include Label Studio, Prolific, Potato, and Mechanical Turk.</p>
+
+    <h3><i class="bi bi-graph-up-arrow"></i> Research Contributions</h3>
+    <p>This task aims to advance socially responsible AI by supporting NLP for low-resource languages and fostering explainable and inclusive NLP systems. It will help establish multilingual benchmarks for polarization detection, promoting fair and transparent computational approaches to understanding societal divisions.</p>
+
+    <h3><i class="bi bi-calendar-week"></i> Timeline</h3>
     <ul>
-      <li><b>Sources:</b> News, Reddit, blogs, Bluesky, regional forums</li>
-      <li><b>Context:</b> Elections, conflicts, rights debates, migration, and more</li>
-      <li><b>Size:</b> 3,000-5,000 annotated samples per language</li>
-      <li><b>Annotation:</b> Label Studio, Prolific, Potato, Mechanical Turk</li>
+      <li>Task announcement: TBD</li>
+      <li>Data release: TBD</li>
+      <li>Evaluation phase begins: TBD</li>
+      <li>Submission deadline: TBD</li>
+      <li>Paper submissions to SemEval: TBD</li>
+      <li>SemEval Workshop at ACL: TBD</li>
     </ul>
 
-    <h3 class="mt-5"><i class="bi bi-graph-up-arrow"></i> Research Contributions</h3>
-    <div class="alert alert-success">
-      <ul>
-        <li>Advance responsible AI for <b>low-resource languages</b></li>
-        <li>Foster <b>explainable</b> & <b>inclusive NLP</b></li>
-        <li>Benchmark multilingual polarization detection</li>
-        <li>Promote fair, transparent computational social science</li>
-      </ul>
-    </div>
-
-    <h3 class="mt-5"><i class="bi bi-calendar-week"></i> Timeline</h3>
-    <div class="timeline bg-light p-3 rounded mb-4">
-      <ul class="list-unstyled mb-0">
-        <li><b>Task announcement:</b> <span class="text-info">TBD</span></li>
-        <li><b>Data release:</b> <span class="text-info">TBD</span></li>
-        <li><b>Evaluation phase starts:</b> <span class="text-info">TBD</span></li>
-        <li><b>Submission deadline:</b> <span class="text-info">TBD</span></li>
-        <li><b>Paper submissions to SemEval:</b> <span class="text-info">TBD</span></li>
-        <li><b>Workshop @ ACL:</b> <span class="text-info">TBD</span></li>
-      </ul>
-    </div>
-
-    <h3 class="mt-5"><i class="bi bi-people-fill"></i> Who Should Participate?</h3>
+    <h3><i class="bi bi-people-fill"></i> Who Should Participate?</h3>
+    <p>This task welcomes participation from:</p>
     <ul>
-      <li><i class="bi bi-laptop"></i> NLP researchers & developers</li>
-      <li><i class="bi bi-bar-chart"></i> Computational social science teams</li>
-      <li><i class="bi bi-shield-exclamation"></i> Hate speech & misinformation practitioners</li>
-      <li><i class="bi bi-hand-index-thumb"></i> Peacebuilding, civil society orgs</li>
-      <li><i class="bi bi-mortarboard"></i> Students & academics (all backgrounds)</li>
+      <li>NLP researchers and developers</li>
+      <li>Computational social science teams</li>
+      <li>Practitioners working on hate speech and misinformation</li>
+      <li>Peacebuilding and civil society organizations</li>
+      <li>Students and academics from cross-disciplinary backgrounds</li>
     </ul>
 
-    <h3 class="mt-5"><i class="bi bi-person-vcard"></i> Organizing Team</h3>
-    <div class="row">
-      <div class="col-md-6">
-        <ul>
-          <li>University of Hamburg</li>
-          <li>Bahir Dar University</li>
-          <li>Macquarie University</li>
-          <li>Imperial College London</li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <ul>
-          <li>University of Pretoria</li>
-          <li>Zayed University</li>
-          <li>Bayero University Kano</li>
-          <li>Northeastern University</li>
-        </ul>
-      </div>
-    </div>
+    <h3><i class="bi bi-person-vcard"></i> Organizing Team</h3>
+    <p>The POLAR task is organized by researchers from:</p>
+    <ul>
+      <li>University of Hamburg</li>
+      <li>Bahir Dar University</li>
+      <li>Macquarie University</li>
+      <li>Imperial College London</li>
+      <li>University of Pretoria</li>
+      <li>Zayed University</li>
+      <li>Bayero University Kano</li>
+      <li>Northeastern University</li>
+    </ul>
 
-    <h3 class="mt-5"><i class="bi bi-envelope-at"></i> Contact & Community</h3>
-    <div class="alert alert-primary">
-      Questions? Email us at
-      <a href="mailto:polarization-semeval-2026-organisers@googlegroups.com" class="fw-bold">polarization-semeval-2026-organisers@googlegroups.com</a>
-      <br>
-      Join our <a href="#">Slack</a>, mailing list & GitHub (links soon)!
-    </div>
+    <h3><i class="bi bi-envelope-at"></i> Contact and Community</h3>
+    <p>For questions or to join the community, reach out via email at 
+      <a href="mailto:polarization-semeval-2026-organisers@googlegroups.com">polarization-semeval-2026-organisers@googlegroups.com</a>.
+      Stay connected through the Slack channel, mailing list, and GitHub repository (links to be announced soon).</p>
   </div>
 </section>
 
