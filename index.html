@@ -26,11 +26,15 @@
   <nav class="nav nav-tabs justify-content-center shadow-sm bg-white sticky-top">
     <a class="nav-link active" href="#Motivation">Motivation</a>
     <a class="nav-link" href="#Languages">Languages</a>
-    <a class="nav-link" href="#Tasks">Tasks</a>
+    <a class="nav-link" href="#Tasks">Subtasks</a>
+    <a class="nav-link" href="#Links">Data Links</a>
     <a class="nav-link" href="#Participation">How to Participate</a>
     <a class="nav-link" href="#Dates">Dates</a>
+    <a class="nav-link" href="#Communication">#Communication</a>
+    <a class="nav-link" href="#FAQ">FAQs</a>
+    <a class="nav-link" href="#Resources">Resources</a>
     <a class="nav-link" href="#Organizers">Organizers</a>
-    <a class="nav-link" href="#Others">Others</a>
+
   </nav>
 
   <div class="container-fluid px-5 my-5">
@@ -38,20 +42,192 @@
 <section class="polar-info-section">
   <div class="container" style="margin-top: -2rem">
 
-    <!-- Row 1: Motivation -->
     <div class="row">
-      <!--col 1: Motivation -->
-      <div class="col col--12" style="margin: 2rem 0rem">
-        <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div>
+
+      <!--col 1: Motivation Start -->
+      <div id="Motivation"class="col col--12" style="margin: 2rem 0rem">
+        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
         <div class="text--center padding-horiz--md">
           <h3>💡 Motivation</h3>
-          <p>Read the task description, download the data, and learn how to submit your results!</p>
+          <p>Polarization is the sharp division of opinions into opposing groups, often with hostility and exclusion. This shared task seeks to advance understanding of how polarization appears in text across languages, cultures, and events. Participants will develop models to detect and interpret polarized content from contexts like elections, conflicts, protests, and debates.</p>
         </div>
-        <!-- <div class="text--center">
-          <a class="button button--secondary" href="#">🔍 Read More</a>
-        </div> -->
       </div>
+    <!-- Col 1: Motivation End -->
+    <!-- Col 2: Languages Start -->
+      <div id="Languages" class="col col--12" style="margin: 2rem 0rem">
+        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">🌐</div> -->
+        <div class="text--center padding-horiz--md">
+          <h3>🌐 Languages</h3>
+          <p>German / Spanish / English / Arabic / Hausa / Urdu / Amharic / Italian / Russian / Burmese (Myanmar) / Chinese / Nepali / Hindi / Telugu / Persian (Farsi) / Turkish / Bengali / Somali / Portuguese (Brazilian) / Emakhuwa / Portuguese (Mozambican) / Igbo (Nigeria)</p>
+        </div>
+      </div>
+    <!-- Col 2: Languages End -->
+    <!-- Col 3: Tasks Start -->
+      <div id="Tasks" class="col col--12" style="margin: 2rem 0rem">
+        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">📝</div> -->
+        <div class="text--center padding-horiz--md">
+          <h3>📝 Subtasks</h3>
+          <p>
+            Participants may choose to compete in one or more of the three subtasks. A few sample instances are provided here for review, and additional trial data can be found at: <strong><a href="https://github.com/Polar-SemEval/trial-data">Trail Data</a></strong>
+            <br>
+            <strong>Subtask 1:</strong> Polarization Detection – Binary classification to determine whether a post contains polarized content (Polarized or Not Polarized).
+          </p>
+            <!--Table 1 Start-->
+            <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+              <thead>
+                <tr style="background-color: #f2f2f2;">
+                  <th>Text</th>
+                  <th>Lang</th>
+                  <th>Polarization</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Find yourself a west bank settler gf</td>
+                  <td>en</td>
+                  <td>TRUE</td>
+                </tr>
+                <tr>
+                  <td>Fascist oligarchs now control the USA</td>
+                  <td>en</td>
+                  <td>TRUE</td>
+                </tr>
+                <tr>
+                  <td>Someone end this lunatic before he starts ethnic cleansing</td>
+                  <td>en</td>
+                  <td>TRUE</td>
+                </tr>
+                <tr>
+                  <td>The EU is increasing military aid to Ukraine to one billion euros the press release on the website of the Council of Europe.</td>
+                  <td>en</td>
+                  <td>FALSE</td>
+                </tr>
+                <tr>
+                  <td>House drafts bill to strike Iran proxies amid IsraelHamas</td>
+                  <td>en</td>
+                  <td>FALSE</td>
+                </tr>
+                <tr>
+                  <td>Contested races across county early voting</td>
+                  <td>en</td>
+                  <td>FALSE</td>
+                </tr>
+              </tbody>
+            </table>            
+            <!--Table 1 End-->
+            <p>
+              <strong>Subtask 2:</strong> Polarization Type Classification – Identify the target of polarization as one of the following categories: Gender/Sexual, Political, Religious, Racial/Ethnic, or Other.
+            </p>
+            <!--Table 2 Start-->
+            <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+              <thead>
+                <tr style="background-color: #f2f2f2;">
+                  <th>Text</th>
+                  <th>Lang</th>
+                  <th>Gender/Sexual</th>
+                  <th>Political</th>
+                  <th>Religious</th>
+                  <th>Racial/Ethnic</th>
+                  <th>Other</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Find yourself a west bank settler gf</td>
+                  <td>en</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Fascist oligarchs now control the USA</td>
+                  <td>en</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Someone end this lunatic before he starts ethnic cleansing</td>
+                  <td>en</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--Table 2 End--> 
+            <p>
+              <strong>Subtask 3:</strong> Manifestation Identification – Classify how polarization is expressed, with multiple possible labels including Vilification, Extreme Language, Stereotype, Invalidation, Lack of Empathy, and Dehumanization.Polarization Type Classification – Identify the target of polarization as one of the following categories: Gender/Sexual, Political, Religious, Racial/Ethnic, or Other.
+            </p>
+            <!--Table 3 Start-->
+            <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+              <thead>
+                <tr style="background-color: #f2f2f2;">
+                  <th>Text</th>
+                  <th>Lang</th>
+                  <th>Vilification</th>
+                  <th>Extreme Language</th>
+                  <th>Stereotype</th>
+                  <th>Invalidation</th>
+                  <th>Lack of Empathy</th>
+                  <th>Dehumanization</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Find yourself a west bank settler gf</td>
+                  <td>en</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Fascist oligarchs now control the USA</td>
+                  <td>en</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Someone end this lunatic before he starts ethnic cleansing</td>
+                  <td>en</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+            <!--Table 3 End-->                       
+        </div>
+      </div>
+      <!-- Col 3: Tasks End -->
+      <!-- Col 4: Data Links Start -->
+      <h3>💡 Dataset and Download Links</h3>
+      <p><strong>Trial Dataset: https://github.com/Polar-SemEval/trial-data</strong></p>
+      <!--Col 4: Data Links End-->
 
+      <!-- Col 5: How to Participate Start -->
+      <!-- Col 5: How to Participate End -->
+      
+
+
+    
+    
     </div>
 
   </div>
