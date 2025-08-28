@@ -71,20 +71,30 @@
       </div>
     </div>
   </header>
+          <div class="container">
+            <div class="row">
 
-  <nav class="nav nav-tabs justify-content-center shadow-sm bg-white sticky-top flex-wrap">
-    <a class="nav-link active" href="#">Motivation</a>
-    <a class="nav-link" href="#Languages">Languages</a>
-    <a class="nav-link" href="#Tasks">Subtasks</a>
-    <a class="nav-link" href="#Links">Data Links</a>
-    <a class="nav-link" href="#Participation">How to Participate</a>
-    <a class="nav-link" href="#Dates">Dates</a>
-    <a class="nav-link" href="#Communication">Communication</a>
-    <a class="nav-link" href="#FAQ">FAQs</a>
-    <a class="nav-link" href="#Resources">Resources</a>
-    <a class="nav-link" href="#Organizers">Organizers</a>
+                <nav class="nav nav-tabs justify-content-center shadow-sm bg-white sticky-top flex-wrap">
+                  <div class="col-12">
+                  <a class="nav-link active" href="#">Motivation</a>
+                  <a class="nav-link" href="#Languages">Languages</a>
+                  <a class="nav-link" href="#Tasks">Subtasks</a>
+                  <a class="nav-link" href="#Links">Data Links</a>
+                  <a class="nav-link" href="#Participation">How to Participate</a>
+                  </div>
+                  <div class="col-12">
+                  <a class="nav-link" href="#Dates">Dates</a>
+                  <a class="nav-link" href="#Communication">Communication</a>
+                  <a class="nav-link" href="#FAQ">FAQs</a>
+                  <a class="nav-link" href="#Resources">Resources</a>
+                  <a class="nav-link" href="#Organizers">Organizers</a>
+                  </div>
+                </nav>
+              
+            </div>
+          </div>
 
-  </nav>
+
 
   <div class="container-fluid px-5 my-5">
 
@@ -287,7 +297,7 @@
           <li><strong>Develop:</strong> Build your models using the provided data.</li>
           <li><strong>Submit:</strong> Submit your predictions on the CodaBench competition platform.</li>
         </ul>
-
+                
         <h3>💡 Evaluation</h3>
         <p>
           <ul>
@@ -602,21 +612,21 @@
             <h3>💡 Communication</h3>
             <section class="cta-section container mb-5">
               <div class="row justify-content-center g-4">
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <a href="https://discord.gg/XpJNRXWt" target="_blank class="card text-center text-decoration-none shadow-sm">
                     <div class="card-body">
                       <h3 class="card-title text-primary">📢 Join Discord </h3>
                     </div>
                   </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <a href="https://groups.google.com/g/polarization-semeval-2026-participants" target="_blank class="card text-center text-decoration-none shadow-sm">
                     <div class="card-body">
                       <h3 class="card-title text-success">🚀 Join Google Group</h3>
                     </div>
                   </a>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <a href="polarization-semeval-2026-organisers@googlegroups.com" target="_blank class="card text-center text-decoration-none shadow-sm">
                     <div class="card-body">
                       <h3 class="card-title text-white">📅 Contact Organizers</h3>
@@ -628,9 +638,215 @@
           </div>
         </div>
         <!--Col 7: Communication End-->
+        <!-- Col 8: FAQ Start -->
+      <div id="FAQ"class="col col-12" style="margin: 2rem 0rem">
+        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
+        <div class="text--center padding-horiz--md">
+          <h3>💡 FAQs</h3>
+            <!--14-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFourteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                  Do I have to participate in all languages for a given track?
+                </button>
+              </h2>
+              <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  No. You may choose one or more languages.
+                </div>
+              </div>
+            </div>
 
+            <!--15-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFifteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                  How will you verify my submitted model?
+                </button>
+              </h2>
+              <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  To be included in the final team rankings, participants must submit a system description paper detailing their approach and methodology. This ensures transparency and scientific integrity.
+                </div>
+              </div>
+            </div>
 
-    
+            <!--16-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSixteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                  When will you release the gold labels?
+                </button>
+              </h2>
+              <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>Dev set: Released at the start of the evaluation phase.</li>
+                    <li>Test set(s): Released only after the competition ends.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--17-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeventeen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                  Can I use LLMs in the different tasks?
+                </button>
+              </h2>
+              <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Yes.
+                </div>
+              </div>
+            </div>
+
+            <!--18-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEighteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                  Can I use additional datasets (e.g., publicly available ones)?
+                </button>
+              </h2>
+              <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Yes, but you must cite them properly in your system description paper.
+                </div>
+              </div>
+            </div>
+
+            <!--19-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNineteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+                  How was the data collected?
+                </button>
+              </h2>
+              <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul>
+                    <li>Data sources include news websites, Reddit, blogs, Bluesky, and regional forums, covering events such as elections, conflicts, gender rights, migration, and more.</li>
+                    <li>Each language contains 3,000–5,000 annotated instances. Annotation platforms include Label Studio, Prolific, Potato, and Mechanical Turk.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--20-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwenty">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                  How was the data annotated, and did you use LLMs?
+                </button>
+              </h2>
+              <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  No LLMs were used. All data was annotated by at least three native speakers per instance.
+                </div>
+              </div>
+            </div>
+
+            <!--21-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwentyOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
+                  Will I be included in the final ranking if I do not write a system description paper?
+                </button>
+              </h2>
+              <div id="collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="headingTwentyOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  No. A system description paper is mandatory for inclusion in the final ranking.
+                </div>
+              </div>
+            </div>
+
+            <!--22-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwentyTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+                  I have never written a system description paper. How can I write one?
+                </button>
+              </h2>
+              <div id="collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="headingTwentyTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  We will provide an online tutorial and resources to help guide you.
+                </div>
+              </div>
+            </div>
+
+            <!--23-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwentyThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyThree" aria-expanded="false" aria-controls="collapseTwentyThree">
+                  Do I need to pay conference registration fees or attend SemEval for my paper to be published?
+                </button>
+              </h2>
+              <div id="collapseTwentyThree" class="accordion-collapse collapse" aria-labelledby="headingTwentyThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  No. Publication does not require attendance. If you do not attend the workshop, you do not need to pay any fees. If you do wish to attend, standard registration fees apply.
+                </div>
+              </div>
+            </div>
+
+            <!--24-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwentyFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyFour" aria-expanded="false" aria-controls="collapseTwentyFour">
+                  Our system did not perform well. Should I still write a system description paper?
+                </button>
+              </h2>
+              <div id="collapseTwentyFour" class="accordion-collapse collapse" aria-labelledby="headingTwentyFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Yes! We strongly encourage all teams to submit a paper. Negative results are valuable to the community and will help advance research on polarization.
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+        <!-- Col 8: FAQ End -->
+
+        <!-- Col 9: Resources Start -->
+        <div id="Resources"class="col col-12" style="margin: 2rem 0rem">
+          <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
+          <div class="text--center padding-horiz--md">
+            <h3>💡 Resources</h3>
+            <ul>
+              <li><a href="https://semeval.github.io/faq.html" target="_blank">Frequently Asked Questions about SemEval</a></li>
+              <li><a href="https://semeval.github.io/paper-requirements.html" target="_blank">Paper Submission Requirements</a></li>
+              <li><a href="https://semeval.github.io/system-paper-template.html" target="_blank">Guidelines for Writing Papers</a></li>
+              <li><a href="https://github.com/acl-org/acl-style-files" target="_blank">Paper style file</a></li>
+            </ul>            
+          </div>
+        </div>
+        <!-- Col 9: Resources End -->
+
+      <!-- Col 10: Organizers Start -->
+      <div id="Organizers"class="col col-12" style="margin: 2rem 0rem">
+        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
+        <div class="text--center padding-horiz--md">
+          <h3>💡 Organizers</h3>
+          <ul>
+            <li><strong>Dr. Usman Naseem</strong> – Macquarie University (Australia)</li>
+            <li><strong>Dr. Seid Muhie Yimam</strong> – University of Hamburg (Germany)</li>
+            <li><strong>Robert Geislinger</strong> – University of Hamburg (Germany)</li>
+            <li><strong>Dr. Shamsuddeen Hassan Muhammad</strong> – Imperial College London (UK)</li>
+            <li><strong>Dr. Sarah Kohail</strong> – Zayed University (United Arab Emirates)</li>
+            <li><strong>Juan Ren</strong> – Macquarie University (Australia)</li>
+            <li><strong>Rudy Alexandro Garrido Veliz</strong> – University of Hamburg (Germany)</li>
+            <li><strong>Saba Anwar</strong> – University of Hamburg (Germany)</li>
+            <li><strong>Dr. Ibrahim Said Ahmad</strong> – Bayero University Kano (Nigeria) & Northeastern University (USA)</li>
+            <li><strong>Dr. Idris Abdulmumin</strong> – University of Pretoria (South Africa)</li>
+            <li><strong>Dr. Abinew Ali Ayele</strong> – Bahir Dar University (Ethiopia)</li>
+            <li><strong>Prof. Adem Chanie Ali</strong> – Bahir Dar University (Ethiopia) & University of Hamburg (Germany)</li>
+            <li><strong>Dr. Martin Semmann</strong> – University of Hamburg (Germany)</li>
+            <li><strong>Prof. Dr. Chris Biemann</strong> – University of Hamburg (Germany)</li>
+          </ul>          
+        </div>
+      </div>
+      <!-- Col 10: Organizers End -->
+
     </div>
 
   </div>
