@@ -1,831 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>POLAR @ 2026</title>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>POLAR @ SemEval-2026</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/style.css" />
-  <style>
-    .navbar .nav-link.active {
-      color: #007bff !important;
-      font-weight: bold;
-      text-decoration: underline;
-}
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  </style>
-</head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80" tabindex="0">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
 
+							<!-- Header -->
+								<header id="header">
+									<a href="/" class="logo"><strong>POLAR</strong> @ SemEval-2026</a>
+									<ul class="icons">
+										<li><a href="https://discord.gg/XpJNRXWt" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+										<li><a href="https://groups.google.com/g/polarization-semeval-2026-participants" class="icon solid fa-envelope"><span class="label">Google Group</span></a></li>
+										<li><a href="https://github.com/Polar-SemEval/trial-data" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
 
-  <!-- <button id="backToTop" title="Go to top">⬆️</button> -->
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>POLAR @ SemEval-2026<br />
+											Task 9</h1>
+											<p>Detecting Multilingual, Multicultural and Multievent Online Polarization</p>
+										</header>
+										<p>Polarization is the sharp division of opinions into opposing groups, often with hostility and exclusion. This shared task seeks to advance understanding of how polarization appears in text across languages, cultures, and events. Participants will develop models to detect and interpret polarized content from contexts like elections, conflicts, protests, and debates.</p>
+										<ul class="actions">
+											<li><a href="tasks.html" class="button big">View Tasks</a></li>
+											<li><a href="#" class="button big">Go to Competition</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/logo-small.png" alt="POLAR Task Banner" />
+									</span>
+								</section>
 
-  <header class="hero-section">
-    <div class="overlay">
-      <div class="container text-center  hero-text">
-        <h1 class="display-6 fw-bold" style="color: #542b76;">
-            Polar@SemEval-2026  <br>Task 9: Detecting Multilingual, Multicultural and Multievent Online Polarization
-        </h1>
-        <p class="lead" style="color: #724d9d;">
-          Attitude Polarization Detection in Multilingual, Multicultural and Multievent Contexts
-        </p>
-      </div>
-    </div>
-  </header>
-  
-  <nav class="nav nav-tabs justify-content-center shadow-sm bg-white sticky-top flex-wrap">
-    <a class="nav-link active" href="#Tasks">Tasks</a>
-    <!-- <a class="nav-link" href="#Languages">Languages</a> -->
-    <!-- <a class="nav-link" href="#Tasks">Subtasks</a> -->
-    <!-- <a class="nav-link" href="#Links">Data Links</a> -->
-    <a class="nav-link" href="#Participation">How to Participate</a>
-    <a class="nav-link" href="#FAQ">FAQs</a>
-    <a class="nav-link" href="#Dates">Dates</a>
-    <a class="nav-link" href="#Resources">Resources</a>
-    <a class="nav-link" href="#Communication">Communication</a>
-    <a class="nav-link" href="#Organizers">Organizers</a>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Key Information</h2>
+									</header>
+									<div class="features">
+										<article>
+											<span class="icon solid fa-comments"></span>
+											<div class="content">
+												<h3>22 Languages</h3>
+												<p>German, Spanish, English, Arabic, Hausa, Urdu, Amharic, Italian, Russian, Burmese, Chinese, Nepali, Hindi, Telugu, Persian, Turkish, Bengali, Somali, Portuguese, Emakhuwa, and Igbo.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-tasks"></span>
+											<div class="content">
+												<h3>3 Subtasks</h3>
+												<p>Polarization Detection, Polarization Type Classification, and Manifestation Identification across multiple languages and cultural contexts.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-calendar"></span>
+											<div class="content">
+												<h3>Important Dates</h3>
+												<p>Training data ready: September 10, 2025. Evaluation period: January 10 - February 1, 2026. Workshop: Summer 2026.</p>
+											</div>
+										</article>
+										<article>
+											<span class="icon solid fa-chart-line"></span>
+											<div class="content">
+												<h3>Evaluation</h3>
+												<p>All subtasks evaluated using Macro F1 score across different languages and cultural contexts.</p>
+											</div>
+										</article>
+									</div>
+								</section>
 
-  </nav>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Latest Announcements</h2>
+									</header>
+									
+									<style>
+									.announcements-list {
+										list-style: none;
+										padding: 0;
+									}
+									.announcements-list li {
+										border-bottom: solid 1px rgba(210, 215, 217, 0.75);
+										padding: 1.5em 0;
+									}
+									.announcements-list li:last-child {
+										border-bottom: 0;
+									}
+									.announcement-date {
+										color: #f56a6a;
+										font-size: 0.8em;
+										font-weight: 600;
+										text-transform: uppercase;
+										letter-spacing: 0.075em;
+										margin-bottom: 0.5em;
+										display: block;
+									}
+									.announcement-title {
+										color: #3d4449;
+										font-size: 1.1em;
+										font-weight: 600;
+										margin-bottom: 0.5em;
+									}
+									.announcement-title a {
+										color: inherit;
+										text-decoration: none;
+										border-bottom: 0;
+									}
+									.announcement-title a:hover {
+										color: #f56a6a;
+									}
+									.announcement-summary {
+										color: #7f888f;
+										margin: 0;
+									}
+									.loading {
+										text-align: center;
+										padding: 2em 0;
+										color: #7f888f;
+									}
+									</style>
 
-  <div class="container-fluid px-5 my-5">
+									<div id="latest-announcements">
+										<div class="loading">Loading latest announcements...</div>
+									</div>
 
-<section class="polar-info-section">
+									<ul class="actions">
+										<li><a href="announcements/" class="button">View All Announcements</a></li>
+									</ul>
 
-<div class="padding-horiz--md"></div>
+									<script>
+									// Load latest announcements for homepage
+									async function loadLatestAnnouncements() {
+										try {
+											const response = await fetch('announcements/announcements.json');
+											if (!response.ok) {
+												throw new Error('Failed to load announcements');
+											}
+											const announcements = await response.json();
+											
+											// Sort by date (newest first) and take only the first 5
+											const latestAnnouncements = announcements
+												.sort((a, b) => new Date(b.date) - new Date(a.date))
+												.slice(0, 5);
+											
+											displayLatestAnnouncements(latestAnnouncements);
+										} catch (error) {
+											console.error('Error loading announcements:', error);
+											document.getElementById('latest-announcements').innerHTML = 
+												'<div class="loading">Unable to load announcements.</div>';
+										}
+									}
 
-<div class="container" style="margin-top: -2rem">
+									function displayLatestAnnouncements(announcements) {
+										const container = document.getElementById('latest-announcements');
+										
+										if (announcements.length === 0) {
+											container.innerHTML = '<div class="loading">No announcements available.</div>';
+											return;
+										}
 
-  <div class="row">
-      <div id="Tasks"></div>
-      <!--col 1: Motivation Start -->
-      <div class="col col-12" style="margin: 2rem 0rem">
-        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
-        <div class="text--center padding-horiz--md">
-          <h3>💡 Motivation</h3>
-          <p>Polarization is the sharp division of opinions into opposing groups, often with hostility and exclusion. This shared task seeks to advance understanding of how polarization appears in text across languages, cultures, and events. Participants will develop models to detect and interpret polarized content from contexts like elections, conflicts, protests, and debates.</p>
-        </div>
-      </div>
-    <!-- Col 1: Motivation End -->
-    <!-- Col 2: Languages Start -->
-      <div id="" class="col col-12" style="margin: 2rem 0rem">
-        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">🌐</div> -->
-        <div class="text--center padding-horiz--md">
-          <h3>🌐 Languages</h3>
-          <p>German / Spanish / English / Arabic / Hausa / Urdu / Amharic / Italian / Russian / Burmese (Myanmar) / Chinese / Nepali / Hindi / Telugu / Persian (Farsi) / Turkish / Bengali / Somali / Portuguese (Brazilian) / Emakhuwa / Portuguese (Mozambican) / Igbo (Nigeria)</p>
-        </div>
-      </div>
-    <!-- Col 2: Languages End -->
-    <!-- Col 3: Tasks Start -->
-      <div id="" class="col col-12" style="margin: 2rem 0rem">
-        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">📝</div> -->
-        <div class="text--center padding-horiz--md">
-          <h3>📝 Subtasks</h3>
-          <p>
-            Participants may choose to compete in one or more of the three subtasks. A few sample instances are provided here for review, and additional trial data can be found at: <strong><a href="https://github.com/Polar-SemEval/trial-data" target="_blank">Trial Data</a></strong>
-            <br>
-            <strong>Subtask 1:</strong> Polarization Detection – Binary classification to determine whether a post contains polarized content (Polarized or Not Polarized).
-          </p>
-            <!--Table 1 Start-->
-            <table  class="table table-striped table-hover">
-            <!-- <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;"> -->
-              <thead>
-                <tr style="background-color: #f2f2f2;">
-                  <th>Text</th>
-                  <th>Lang</th>
-                  <th>Polarization</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-start">Find yourself a west bank settler gf</td>
-                  <td>en</td>
-                  <td>TRUE</td>
-                </tr>
-                <tr>
-                  <td class="text-start">Fascist oligarchs now control the USA</td>
-                  <td>en</td>
-                  <td>TRUE</td>
-                </tr>
-                <tr>
-                  <td class="text-start">Someone end this lunatic before he starts ethnic cleansing</td>
-                  <td>en</td>
-                  <td>TRUE</td>
-                </tr>
-                <tr>
-                  <td class="text-start">The EU is increasing military aid to Ukraine to one billion euros the press release on the website of the Council of Europe.</td>
-                  <td>en</td>
-                  <td>FALSE</td>
-                </tr>
-                <tr>
-                  <td class="text-start">House drafts bill to strike Iran proxies amid IsraelHamas</td>
-                  <td>en</td>
-                  <td>FALSE</td>
-                </tr>
-                <tr>
-                  <td class="text-start">Contested races across county early voting</td>
-                  <td>en</td>
-                  <td>FALSE</td>
-                </tr>
-              </tbody>
-            </table>            
-            <!--Table 1 End-->
-            <br>
-            <p>
-              <strong>Subtask 2:</strong> Polarization Type Classification – Identify the target of polarization as one of the following categories: Gender/Sexual, Political, Religious, Racial/Ethnic, or Other.
-            </p>
-            <!--Table 2 Start-->
-            <table class="table table-striped table-hover">
-              <thead>
-                <tr style="background-color: #f2f2f2;">
-                  <th>Text</th>
-                  <th>Lang</th>
-                  <th>Gender/Sexual</th>
-                  <th>Political</th>
-                  <th>Religious</th>
-                  <th>Racial/Ethnic</th>
-                  <th>Other</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-start">Find yourself a west bank settler gf</td>
-                  <td>en</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td class="text-start">Fascist oligarchs now control the USA</td>
-                  <td>en</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td class="text-start">Someone end this lunatic before he starts ethnic cleansing</td>
-                  <td>en</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                </tr>
-              </tbody>
-            </table>
-            <!--Table 2 End--> 
-            <br>
-            <p>
-              <strong>Subtask 3:</strong> Manifestation Identification – Classify how polarization is expressed, with multiple possible labels including Vilification, Extreme Language, Stereotype, Invalidation, Lack of Empathy, and Dehumanization.Polarization Type Classification – Identify the target of polarization as one of the following categories: Gender/Sexual, Political, Religious, Racial/Ethnic, or Other.
-            </p>
-            <!--Table 3 Start-->
-            <table class="table table-striped table-hover">
-              <thead>
-                <tr style="background-color: #f2f2f2;">
-                  <th>Text</th>
-                  <th>Lang</th>
-                  <th>Vilification</th>
-                  <th>Extreme Language</th>
-                  <th>Stereotype</th>
-                  <th>Invalidation</th>
-                  <th>Lack of Empathy</th>
-                  <th>Dehumanization</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="text-start">Find yourself a west bank settler gf</td>
-                  <td>en</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td class="text-start">Fascist oligarchs now control the USA</td>
-                  <td>en</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <td class="text-start">Someone end this lunatic before he starts ethnic cleansing</td>
-                  <td>en</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-              </tbody>
-            </table>
-            <!--Table 3 End-->                       
-        </div>
-      </div>
-      <!-- Col 3: Tasks End -->
-       
-      <!-- Col 4: Data Links Start -->
-      <div id=""class="col col-12" style="margin: 2rem 0rem">
-        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
-        <div class="text--center padding-horiz--md">
-          <h3>📂 Dataset and Download Links</h3>
-          <p><a href="https://github.com/Polar-SemEval/trial-data" target="_blank">Trial Data</a></p>
-        </div>
-      </div>
-      <!--Col 4: Data Links End-->
-      <div id="Participation"></div>
-      <!-- Col 5: How to Participate Start -->
-      <div id="" class="col col-12" style="margin: 2rem 0rem">
-        <h3>📝 How to Participate</h3>
-        <ul>
-          <li><strong>Register:</strong> Sign up on the CodaBench competition platform.</li>
-          <li><strong>Tasks:</strong> Decide on the task(s) you want to participate in (Subtask 1, 2 and/or 3).</li>
-          <li><strong>Download:</strong> Access to the datasets for each task will be provided in this repository.</li>
-          <li><strong>Develop:</strong> Build your models using the provided data.</li>
-          <li><strong>Submit:</strong> Submit your predictions on the CodaBench competition platform.</li>
-        </ul>
-                
-        <h3>📈 Evaluation</h3>
-        <p>
-          <ul>
-            <li>Subtask 1: Macro F1</li>
-            <li>Subtask 2: Macro F1</li>
-            <li>Subtask 3: Macro F1</li>
-          </ul>
-        </p>
-        <h3>⚖️ Competition Rules and Terms </h3>
-      <div class="accordion" id="accordionExample">
-        <!-- 1 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              1. Consent to Public Release of Scores
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>By submitting results, you consent to the public release of your scores on:
-                  <ul>
-                    <li>the competition website</li>
-                    <li>at the designated workshop</li>
-                    <li>in associated proceedings</li>
-                  </ul>
-                </li>
-                <li>Task organizers have discretion over the release and choice of metrics.</li>
-                <li>Scores may include:
-                  <ul>
-                    <li>automatic and manual quantitative judgments</li>
-                    <li>qualitative judgments</li>
-                    <li>other metrics as deemed appropriate</li>
-                  </ul>
-                </li>
-              </ul>              
-            </div>
-          </div>
-        </div>
-      
-        <!-- 2 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              2. Score Release and Validity
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Task organizers reserve the right to withhold scores for:
-                  <ul>
-                    <li>incomplete submissions</li>
-                    <li>erroneous submissions</li>
-                    <li>deceptive submissions</li>
-                    <li>rule-violating submissions</li>
-                  </ul>
-                </li>
-                <li>Inclusion of a submission's scores does not constitute endorsement.</li>
-              </ul>              
-            </div>
-          </div>
-        </div>
-      
-        <!-- 3 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              3. Team Participation Rules
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Participants may be involved in only one team.</li>
-                <li>Exceptions may be granted with prior approval from organizers.</li>
-              </ul>              
-            </div>
-          </div>
-        </div>
-        <!-- 4 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              4. Account Management
-            </button>
-          </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Each team must create and use exactly one account on the designated platform.
-                </li>
-              </ul>              
-            </div>
-          </div>
-        </div>
-        <!-- 5 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-              5. Team Constitution
-            </button>
-          </h2>
-          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Team membership cannot be changed after the evaluation period begins.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- 6 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingSix">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-              6. Development Period Rules
-            </button>
-          </h2>
-          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Teams can submit up to 999 submissions.</li>
-                <li>Results are visible only to the submitting team.</li>
-                <li>Leaderboard is disabled.</li>
-                <li>Warnings and errors are visible for each submission.</li>
-              </ul>              
-            </div>
-          </div>
-        </div>
-        <!--7. Evaluation Period Rules-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingSeven">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-              7. Evaluation Period Rules
-            </button>
-          </h2>
-          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>The teams are constrained to make 3 submissions.</li>
-                <li>Only the final submission will be considered official.</li>
-                <li>Warnings and errors are visible for each submission.</li>
-              </ul>              
-            </div>
-          </div>
-        </div>
+										const announcementsList = announcements.map(announcement => {
+											const date = new Date(announcement.date);
+											const formattedDate = date.toLocaleDateString('en-US', { 
+												year: 'numeric', 
+												month: 'long', 
+												day: 'numeric' 
+											});
+											const formattedTime = date.toLocaleTimeString('en-US', { 
+												hour: '2-digit', 
+												minute: '2-digit',
+												timeZone: 'UTC'
+											});
 
-        <!--8. Post-Competition-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingEight">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-              8. Post-Competition
-            </button>
-          </h2>
-          <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>The gold labels will be released after the competition.</li>
-                <li>The teams are encouraged to report results on all their system variants in their description paper.</li>
-                <li>The official submission results must be clearly indicated.</li>
-              </ul>              
-            </div>
-          </div>
-        </div>
+											return `
+												<li>
+													<span class="announcement-date">${formattedDate} • ${formattedTime} UTC</span>
+													<h3 class="announcement-title">
+														<a href="announcements/${announcement.filename}">${announcement.title}</a>
+													</h3>
+													<p class="announcement-summary">${announcement.summary}</p>
+												</li>
+											`;
+										}).join('');
 
-        <!--9. Public Release of Submissions-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingNine">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-              9. Public Release of Submissions
-            </button>
-          </h2>
-          <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Final team submissions may be made public after the evaluation period.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+										container.innerHTML = `<ul class="announcements-list">${announcementsList}</ul>`;
+									}
 
-        <!--10. Disclaimer about the Datasets-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTen">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-              10. Disclaimer about the Datasets
-            </button>
-          </h2>
-          <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Organizers and affiliated institutions provide no warranties on dataset correctness or completeness.</li>
-                <li>They are not liable for dataset access or usage.</li>
-              </ul>              
-            </div>
-          </div>
-        </div>
+									// Load announcements when page loads
+									document.addEventListener('DOMContentLoaded', loadLatestAnnouncements);
+									</script>
 
-        <!--11. Peer Review Process-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingEleven">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-              11. Peer Review Process
-            </button>
-          </h2>
-          <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Each participant will review another team's system description paper.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+								</section>
 
-        <!--12. Dataset Usage Restrictions-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwelve">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-              12. Dataset Usage Restrictions
-            </button>
-          </h2>
-          <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>Datasets should only be used for scientific or research purposes.</li>
-                <li>Any other use is explicitly prohibited.</li>
-                <li>Datasets must not be redistributed or shared with third parties.</li>
-                <li>Interested parties should be directed to the official website.</li>
-              </ul>              
-            </div>
-          </div>
-        </div>
+								
+							<!-- Footer -->
+								<footer id="footer">
+									<p>&copy; 2026 POLAR Shared Task. All rights reserved. Adapted from Editorial Template by <a href="https://html5up.net">HTML5 UP</a></p>
+								</footer>
 
-        <!--13. Final Ranking-->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThirteen">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-              13. Final Ranking
-            </button>
-          </h2>
-          <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <ul>
-                <li>To be included in the official task ranking, you <strong>MUST</strong> submit a system description paper.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+						</div>
+					</div>
 
-        <!--End of accordion items-->
-      </div>
-      </div>
-      <!-- Col 5: How to Participate End -->
-      <div id="FAQ"></div>
-      <!-- Col 8: FAQ Start -->
-      <div id="" class="col col-12" style="margin: 2rem 0rem">
-        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
-        <div class="text--center padding-horiz--md">
-          <h3>❓ FAQs</h3>
-          <div class="accordion" id="accordionExample">
-            <!--14-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFourteen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-                  Do I have to participate in all languages for a given track?
-                </button>
-              </h2>
-              <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  No. You may choose one or more languages.
-                </div>
-              </div>
-            </div>
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
 
-            <!--15-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFifteen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                  How will you verify my submitted model?
-                </button>
-              </h2>
-              <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  To be included in the final team rankings, participants must submit a system description paper detailing their approach and methodology. This ensures transparency and scientific integrity.
-                </div>
-              </div>
-            </div>
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="/">Homepage</a></li>
+										<li><a href="tasks.html">Tasks & Subtasks</a></li>
+										<li><a href="participation.html">How to Participate</a></li>
+										<li><a href="faq.html">FAQs</a></li>
+										<li><a href="dates.html">Important Dates</a></li>
+										<li><a href="resources.html">Resources</a></li>
+										<li><a href="communication.html">Communication</a></li>
+										<li><a href="organizers.html">Organizers</a></li>
+										<li><a href="announcements/">Announcements</a></li>
+									</ul>
+								</nav>
 
-            <!--16-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSixteen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
-                  When will you release the gold labels?
-                </button>
-              </h2>
-              <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Dev set: Released at the start of the evaluation phase.</li>
-                    <li>Test set(s): Released only after the competition ends.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+						</div>
+					</div>
 
-            <!--17-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSeventeen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
-                  Can I use LLMs in the different tasks?
-                </button>
-              </h2>
-              <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Yes.
-                </div>
-              </div>
-            </div>
+			</div>
 
-            <!--18-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingEighteen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
-                  Can I use additional datasets (e.g., publicly available ones)?
-                </button>
-              </h2>
-              <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Yes, but you must cite them properly in your system description paper.
-                </div>
-              </div>
-            </div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-            <!--19-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingNineteen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
-                  How was the data collected?
-                </button>
-              </h2>
-              <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <ul>
-                    <li>Data sources include news websites, Reddit, blogs, Bluesky, and regional forums, covering events such as elections, conflicts, gender rights, migration, and more.</li>
-                    <li>Each language contains 3,000–5,000 annotated instances. Annotation platforms include Label Studio, Prolific, Potato, and Mechanical Turk.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!--20-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwenty">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
-                  How was the data annotated, and did you use LLMs?
-                </button>
-              </h2>
-              <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  No LLMs were used. All data was annotated by at least three native speakers per instance.
-                </div>
-              </div>
-            </div>
-
-            <!--21-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwentyOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
-                  Will I be included in the final ranking if I do not write a system description paper?
-                </button>
-              </h2>
-              <div id="collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="headingTwentyOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  No. A system description paper is mandatory for inclusion in the final ranking.
-                </div>
-              </div>
-            </div>
-
-            <!--22-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwentyTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
-                  I have never written a system description paper. How can I write one?
-                </button>
-              </h2>
-              <div id="collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="headingTwentyTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  We will provide an online tutorial and resources to help guide you.
-                </div>
-              </div>
-            </div>
-
-            <!--23-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwentyThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyThree" aria-expanded="false" aria-controls="collapseTwentyThree">
-                  Do I need to pay conference registration fees or attend SemEval for my paper to be published?
-                </button>
-              </h2>
-              <div id="collapseTwentyThree" class="accordion-collapse collapse" aria-labelledby="headingTwentyThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  No. Publication does not require attendance. If you do not attend the workshop, you do not need to pay any fees. If you do wish to attend, standard registration fees apply.
-                </div>
-              </div>
-            </div>
-
-            <!--24-->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwentyFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyFour" aria-expanded="false" aria-controls="collapseTwentyFour">
-                  Our system did not perform well. Should I still write a system description paper?
-                </button>
-              </h2>
-              <div id="collapseTwentyFour" class="accordion-collapse collapse" aria-labelledby="headingTwentyFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  Yes! We strongly encourage all teams to submit a paper. Negative results are valuable to the community and will help advance research on polarization.
-                </div>
-              </div>
-            </div>
-            </div>
-
-        </div>
-      </div>
-        <!-- Col 8: FAQ End -->
-      <div id="Dates"></div>
-      <!-- Col 6: Important Dates Start -->
-      <div id="" class="col col-12" style="margin: 2rem 0rem">
-        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">📅</div> -->
-        <div class="text--center padding-horiz--md">
-          <h3>📅 Important Dates and Task Phases</h3>
-          <p>
-            Keep track of the key milestones for your participation in the Polar task.
-            All deadlines are 11:59 PM AoE (Anywhere on Earth).
-          </p>
-          <table class="table table-bordered table-striped table-hover">
-            <thead>
-              <tr>
-                <th>📌 Event</th>
-                <th>📆 Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sample data ready</td>
-                <td>8 August 2025</td>
-              </tr>
-              <tr>
-                <td>Training data ready</td>
-                <td>10 September 2025</td>
-              </tr>
-              <tr>
-                <td>Evaluation Start</td>
-                <td>10 January 2026</td>
-              </tr>
-              <tr>
-                <td>Evaluation End</td>
-                <td>1 February 2026</td>
-              </tr>
-              <tr>
-                <td>System Paper Submission Deadline</td>
-                <td>February 2026</td>
-              </tr>
-              <tr>
-                <td>Notification of Acceptance</td>
-                <td>March 2026</td>
-              </tr>
-              <tr>
-                <td>Camera-Ready Papers Due</td>
-                <td>April 2026</td>
-              </tr>
-              <tr>
-                <td>SemEval-2026 Workshop at [Conference Location TBD]</td>
-                <td>Summer 2026</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
-        </div>
-        <!-- Col 6: Important Dates End -->
-        <div id="Resources"></div>
-        <!-- Col 9: Resources Start -->
-        <div id=""class="col col-12" style="margin: 2rem 0rem">
-          <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
-          <div class="text--left padding-horiz--md">
-            <h3 class="text--center" >🔗 Resources</h3>
-            <ul>
-              <li><a href="https://semeval.github.io/faq.html" target="_blank">Frequently Asked Questions about SemEval</a></li>
-              <li><a href="https://semeval.github.io/paper-requirements.html" target="_blank">Paper Submission Requirements</a></li>
-              <li><a href="https://semeval.github.io/system-paper-template.html" target="_blank">Guidelines for Writing Papers</a></li>
-              <li><a href="https://github.com/acl-org/acl-style-files" target="_blank">Paper style file</a></li>
-            </ul>            
-          </div>
-        </div>
-        <!-- Col 9: Resources End -->
-        <div id="Communication"></div>
-        <!-- Col 7: Communication Start -->
-        <div id=""class="col col-12" style="margin: 2rem 0rem">
-          <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
-          <div class="text--center padding-horiz--md">
-            <h3>📨 Communication</h3>
-            <section class="cta-section container mb-5">
-              <div class="row justify-content-center g-4">
-                <div class="col-md-4">
-                  <a href="https://discord.gg/XpJNRXWt" target="_blank" class="card text-center text-decoration-none shadow-sm">
-                    <div class="card-body">
-                      <h3 class="card-title text-success">🟣💬 Join Discord:</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4">
-                  <a href="https://groups.google.com/g/polarization-semeval-2026-participants" target="_blank" class="card text-center text-decoration-none shadow-sm">
-                    <div class="card-body">
-                      <h3 class="card-title text-success">📧👥 Join  Google Group</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4">
-                  <a href="https://groups.google.com/g/polarization-semeval-2026-organisers" target="_blank" class="card text-center text-decoration-none shadow-sm">
-                    <div class="card-body">
-                      <h3 class="card-title text-white">📩👥 Contact Organizers</h3>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-        </div>
-        <!--Col 7: Communication End-->
-      <div id="Organizers"></div>
-      <!-- Col 10: Organizers Start -->
-      <div id=""class="col col-12" style="margin: 2rem 0rem">
-        <!-- <div class="text--center" style="font-size: 2.5rem; margin-bottom: 0.5rem">💡</div> -->
-        <div class="text--left padding-horiz--md">
-          <h3 class="text--center">🧑‍💼 Organizers</h3>
-          <ul>
-            <li><a href="https://usmaann.github.io/" target="_blank"><strong>Dr. Usman Naseem</strong></a> – Macquarie University (Australia)</li>
-            <li><a href="https://seyyaw.github.io/" target="_blank"><strong>Dr. Seid Muhie Yimam</strong></a> – University of Hamburg (Germany)</li>
-            <li><a href="https://github.com/Alienmaster" target="_blank"><strong>Robert Geislinger</strong></a> – University of Hamburg (Germany)</li>
-            <li><a href="https://github.com/shmuhammadd" target="_blank"><strong>Dr. Shamsuddeen Hassan Muhammad</strong></a> – Imperial College London (UK)</li>
-            <li><a href="https://github.com/snkohail" target="_blank"><strong>Dr. Sarah Kohail</strong></a> – Zayed University (United Arab Emirates)</li>
-            <li><a href="" target="_blank"><strong>Juan Ren</strong></a> – Macquarie University (Australia)</li>
-            <li><a href="https://de.linkedin.com/in/rudy-garrido/es" target="_blank"><strong>Rudy Alexandro Garrido Veliz</strong></a> – University of Hamburg (Germany)</li>
-            <li><a href="https://cryocultures.org/person/anwar-saba/" target="_blank"><strong>Saba Anwar</strong></a> – University of Hamburg (Germany)</li>
-            <li><a href="http://isahmadbbr.github.io/" target="_blank"><strong>Dr. Ibrahim Said Ahmad</strong></a> – Bayero University Kano (Nigeria) & Northeastern University (USA)</li>
-            <li><a href="https://abumafrim.github.io/" target="_blank"><strong>Dr. Idris Abdulmumin</strong></a> – University of Pretoria (South Africa)</li>
-            <li><a href="" target="_blank"><strong>Dr. Abinew Ali Ayele</strong></a> – Bahir Dar University (Ethiopia)</li>
-            <li><a href="https://scholar.google.com/citations?user=9jTEx8MAAAAJ&hl=en" target="_blank"><strong>Prof. Adem Chanie Ali</strong></a> – Bahir Dar University (Ethiopia) & University of Hamburg (Germany)</li>
-            <li><a href="https://scholar.google.com/citations?user=p8UoPNcAAAAJ&hl=en" target="_blank"><strong>Dr. Martin Semmann</strong></a> – University of Hamburg (Germany)</li>
-            <li><a href="https://scholar.google.com/citations?user=BdwP-3QAAAAJ&hl=en" target="_blank"><strong>Prof. Dr. Chris Biemann</strong></a> – University of Hamburg (Germany)</li>
-            
-          </ul>          
-        </div>
-      </div>
-      <!-- Col 10: Organizers End -->
-
-    </div>
-
-  </div>
-</section>
-
-
-<footer class="footer-section">
-  <div class="footer-container text-center">
-    <img src="assets/logo-small.png" alt="POLAR Task Logo" style="width: 80px; height: auto; margin-bottom: 10px;" />
-    <p>&copy; 2026 POLAR Shared Task. All rights reserved.</p>
-    <p>Made with ❤️ by the POLAR Team</p>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-  </body>
+	</body>
 </html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>All Announcements - POLAR @ SemEval-2026</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="../" class="logo"><strong>POLAR</strong> @ SemEval-2026</a>
+									<ul class="icons">
+										<li><a href="https://discord.gg/XpJNRXWt" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+										<li><a href="https://groups.google.com/g/polarization-semeval-2026-participants" class="icon solid fa-envelope"><span class="label">Google Group</span></a></li>
+										<li><a href="https://github.com/Polar-SemEval/trial-data" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>All Announcements</h1>
+										<p>Stay updated with the latest news and important information for POLAR @ SemEval-2026 participants.</p>
+									</header>
+
+									<style>
+									.announcements-list {
+										list-style: none;
+										padding: 0;
+									}
+									.announcements-list li {
+										border-bottom: solid 1px rgba(210, 215, 217, 0.75);
+										padding: 2em 0;
+									}
+									.announcements-list li:last-child {
+										border-bottom: 0;
+									}
+									.announcement-date {
+										color: #f56a6a;
+										font-size: 0.8em;
+										font-weight: 600;
+										text-transform: uppercase;
+										letter-spacing: 0.075em;
+										margin-bottom: 0.5em;
+										display: block;
+									}
+									.announcement-title {
+										color: #3d4449;
+										font-size: 1.25em;
+										font-weight: 700;
+										margin-bottom: 0.75em;
+									}
+									.announcement-title a {
+										color: inherit;
+										text-decoration: none;
+										border-bottom: 0;
+									}
+									.announcement-title a:hover {
+										color: #f56a6a;
+									}
+									.announcement-summary {
+										color: #7f888f;
+										margin-bottom: 1em;
+									}
+									.announcement-tags {
+										display: flex;
+										gap: 0.5em;
+										flex-wrap: wrap;
+									}
+									.tag {
+										background: rgba(245, 106, 106, 0.1);
+										color: #f56a6a;
+										font-size: 0.7em;
+										font-weight: 600;
+										text-transform: uppercase;
+										letter-spacing: 0.075em;
+										padding: 0.25em 0.75em;
+										border-radius: 0.375em;
+									}
+									.loading {
+										text-align: center;
+										padding: 3em 0;
+										color: #7f888f;
+									}
+									</style>
+
+									<div id="announcements-container">
+										<div class="loading">Loading announcements...</div>
+									</div>
+
+									<hr class="major" />
+
+									<h2>Stay Updated</h2>
+									<p>Don't miss any important announcements:</p>
+									<ul>
+										<li>Join our <a href="https://discord.gg/XpJNRXWt" target="_blank">Discord server</a> for real-time notifications</li>
+										<li>Subscribe to our <a href="https://groups.google.com/g/polarization-semeval-2026-participants" target="_blank">Google Group</a> for email updates</li>
+										<li>Follow our <a href="https://github.com/Polar-SemEval/trial-data" target="_blank">GitHub repository</a> for data releases</li>
+									</ul>
+
+									<ul class="actions">
+										<li><a href="../" class="button primary">Back to Homepage</a></li>
+									</ul>
+
+									<script>
+									// Load and display announcements from JSON
+									async function loadAnnouncements() {
+										try {
+											const response = await fetch('announcements.json');
+											if (!response.ok) {
+												throw new Error('Failed to load announcements');
+											}
+											const announcements = await response.json();
+											
+											// Sort by date (newest first)
+											announcements.sort((a, b) => new Date(b.date) - new Date(a.date));
+											
+											displayAnnouncements(announcements);
+										} catch (error) {
+											console.error('Error loading announcements:', error);
+											document.getElementById('announcements-container').innerHTML = 
+												'<div class="loading">Unable to load announcements. Please try again later.</div>';
+										}
+									}
+
+									function displayAnnouncements(announcements) {
+										const container = document.getElementById('announcements-container');
+										
+										if (announcements.length === 0) {
+											container.innerHTML = '<div class="loading">No announcements available.</div>';
+											return;
+										}
+
+										const announcementsList = announcements.map(announcement => {
+											const date = new Date(announcement.date);
+											const formattedDate = date.toLocaleDateString('en-US', { 
+												year: 'numeric', 
+												month: 'long', 
+												day: 'numeric' 
+											});
+											const formattedTime = date.toLocaleTimeString('en-US', { 
+												hour: '2-digit', 
+												minute: '2-digit',
+												timeZone: 'UTC'
+											});
+
+											const tags = announcement.tags ? announcement.tags.map(tag => 
+												`<span class="tag">${tag}</span>`
+											).join('') : '';
+
+											return `
+												<li>
+													<span class="announcement-date">${formattedDate} • ${formattedTime} UTC</span>
+													<h3 class="announcement-title">
+														<a href="${announcement.filename}">${announcement.title}</a>
+													</h3>
+													<p class="announcement-summary">${announcement.summary}</p>
+													${tags ? `<div class="announcement-tags">${tags}</div>` : ''}
+												</li>
+											`;
+										}).join('');
+
+										container.innerHTML = `<ul class="announcements-list">${announcementsList}</ul>`;
+									}
+
+									// Load announcements when page loads
+									document.addEventListener('DOMContentLoaded', loadAnnouncements);
+									</script>
+
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p>&copy; 2026 POLAR Shared Task. All rights reserved. Adapted from Editorial Template by <a href="https://html5up.net">HTML5 UP</a></p>
+								</footer>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="../">Homepage</a></li>
+										<li><a href="../tasks.html">Tasks & Subtasks</a></li>
+										<li><a href="../participation.html">How to Participate</a></li>
+										<li><a href="../faq.html">FAQs</a></li>
+										<li><a href="../dates.html">Important Dates</a></li>
+										<li><a href="../resources.html">Resources</a></li>
+										<li><a href="../communication.html">Communication</a></li>
+										<li><a href="../organizers.html">Organizers</a></li>
+                                        <li><a href="../announcements/">Announcements</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

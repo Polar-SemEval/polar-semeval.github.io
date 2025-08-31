@@ -1,229 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>POLAR @ SemEval 2026</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/style.css"/>
-  <style>
-    body {
-      background: #f8fafc;
-      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-      font-size: 1.16rem;
-      line-height: 1.72;
-      color: #222;
-    }
-    .nav-tabs {
-      font-size: 1.18rem;
-    }
-    .nav-tabs .nav-link {
-      padding: 0.8rem 2rem;
-      font-weight: 500;
-      color: #233871;
-    }
-    .nav-tabs .nav-link.active {
-      font-weight: 700;
-      background: #e6ecfe;
-      color: #3366cc !important;
-      border-bottom: 2.5px solid #3366cc;
-    }
-    .the-task {
-      margin-top: 2.3rem;
-    }
-    .the-task .container {
-      max-width: 800px;
-      background: #fff;
-      padding: 2.5rem 2.2rem 2.6rem 2.2rem;
-      border-radius: 1.2rem;
-      box-shadow: 0 2px 18px 0 rgba(34,54,85,0.08), 0 2px 12px 0 rgba(80,100,140,0.07);
-    }
-    .the-task h2 {
-      color: #3366cc;
-      font-weight: 800;
-      font-size: 2.1rem;
-      letter-spacing: 0.35px;
-      margin-top: 0.2em;
-      margin-bottom: 1.3em;
-      text-align: center;
-    }
-    .the-task h3 {
-      color: #3366cc;
-      font-weight: 700;
-      margin-top: 2em;
-      margin-bottom: 1.1em;
-      font-size: 1.35rem;
-      letter-spacing: 0.1px;
-    }
-    .the-task li {
-      margin-bottom: .56em;
-      font-size: 1.08rem;
-    }
-    .badge {
-      font-size: 1em;
-      font-weight: 500;
-      margin-right: 0.25em;
-    }
-    .the-task li span[style*="background-color"] {
-      padding: 0.18em 0.7em;
-      border-radius: 0.33em;
-      font-size: 0.99em;
-      display: inline-block;
-      margin-top: 0.21em;
-      font-weight: 500;
-    }
-    .footer-section {
-      background: #233871;
-      color: #fff;
-      padding: 2.1em 0 1.2em 0;
-      margin-top: 2em;
-      font-size: 1.14rem;
-      letter-spacing: 0.02em;
-    }
-    .footer-section a {
-      color: #90e0ef;
-      text-decoration: underline;
-    }
-    .footer-section img {
-      filter: drop-shadow(0 2px 6px #334);
-      margin-top: 0.6em;
-      margin-bottom: 1.1em;
-    }
-    .footer-container p {
-      margin-bottom: 0.3em;
-    }
-    @media (max-width: 600px) {
-      .the-task .container {
-        padding: 1.1rem 0.3rem 1.5rem 0.3rem;
-        max-width: 100%;
-        border-radius: 0.6rem;
-      }
-      .the-task h2 { font-size: 1.38rem; }
-      .the-task h3 { font-size: 1.14rem; }
-      .footer-section { font-size: 1.08rem; }
-      .nav-tabs { font-size: 1.02rem; }
-      .nav-tabs .nav-link { padding: 0.5rem 1rem; }
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tasks & Subtasks - POLAR @ SemEval-2026</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Important Dates | POLAR @ 2026</title>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/style.css"/>
-</head>
-<body>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
 
-  <nav class="nav nav-tabs justify-content-center shadow-sm bg-white sticky-top">
-    <a class="nav-link" href="index.html#about">About</a>
-    <a class="nav-link active" href="tasks.html">Tasks</a>
-    <a class="nav-link" href="participation.html">Participation</a>
-  </nav>
-<!-- MAIN CONTENT -->
-<section class="the-task container-fluid my-5 px-5">
-  <div class="container-fluid px-5">
+							<!-- Header -->
+								<header id="header">
+									<a href="/" class="logo"><strong>POLAR</strong> @ SemEval-2026</a>
+									<ul class="icons">
+										<li><a href="https://discord.gg/XpJNRXWt" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+										<li><a href="https://groups.google.com/g/polarization-semeval-2026-participants" class="icon solid fa-envelope"><span class="label">Google Group</span></a></li>
+										<li><a href="https://github.com/Polar-SemEval/trial-data" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
+								</header>
 
-    <h2 class="mb-4 text-center"><i class="bi bi-lightning-charge-fill text-warning"></i> The Task</h2>
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Tasks & Subtasks</h1>
+									</header>
 
-    <p>Polarization refers to the division of opinions into two sharply contrasting groups, often accompanied by hostility, intolerance, or exclusion. In today's digital era, polarization is intensifying across platforms and geographies, influencing public discourse, exacerbating conflicts, and contributing to societal fragmentation.</p>
+									<p>Participants may choose to compete in one or more of the three subtasks. A few sample instances are provided here for review, and additional trial data can be found at: <strong><a href="https://github.com/Polar-SemEval/trial-data" target="_blank">Trial Data</a></strong></p>
 
-    <p>This shared task is the first SemEval initiative focused on polarization, aiming to advance the computational understanding of how polarization manifests in text across multiple languages, cultures, and event types. Participants will develop models capable of detecting and interpreting polarization in a variety of online contexts.</p>
-    
-    <p>The task centers on textual data collected from real-world events such as elections, international conflicts, social protests, and ideological debates. The primary goal is to evaluate systems’ ability to identify polarized content and classify its targets.</p>
+									<hr class="major" />
 
-    <h3><i class="bi bi-translate"></i> Multilingual, Multicultural, and Multievent Scope</h3>
-    <p>To promote global inclusivity and cross-cultural representation, the dataset encompasses multiple languages, including many mid/low-resource and underrepresented ones in mainstream NLP research.</p>
-    <ul class="lang-list">
-      <li><b>Already collected and annotated:</b>
-        <span style="background-color:#D6FFD6;">English, German, Spanish, Arabic, Urdu, Amharic, Hausa</span>
-      </li>
-      <li><b>New languages:</b>
-        <span style="background-color:#FFF8DC;">Turkish, Italian, Burmese, Chinese, Hindi, Nepali, Russian, Telugu, Bengali, Persian</span>
-      </li>
-      <li><b>Possible extensions:</b>
-        <span style="background-color:#CCFFFF;">Mozambican Portuguese, Kinyarwanda, Igbo, Twi, Swahili, isiXhosa, Zulu, Emakhuwa</span>
-      </li>
-    </ul>
+									<h2>Subtask 1: Polarization Detection</h2>
+									<p><strong>Binary classification</strong> to determine whether a post contains polarized content (Polarized or Not Polarized).</p>
 
-    <h3><i class="bi bi-diagram-3"></i> Task Format and Subtasks</h3>
-    <p>Participants may choose to compete in one or more of three subtasks:</p>
-    <ol>
-      <li><strong>Subtask 1: Polarization Detection</strong> – Binary classification to determine whether a post contains polarized content (Polarized or Not Polarized).</li>
-      <li><strong>Subtask 2: Polarization Type Classification</strong> – Identify the target of polarization, including political groups, religious groups, racial/ethnic communities, gender identities, sexual orientations, or other domain-specific targets.</li>
-      <li><strong>Subtask 3: Manifestation Identification</strong> – Classify how polarization is expressed; multiple labels possible, such as stereotyping, vilification, dehumanization, deindividuation, extreme language, lack of empathy, invalidation.</li>
-    </ol>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Text</th>
+													<th>Lang</th>
+													<th>Polarization</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Find yourself a west bank settler gf</td>
+													<td>en</td>
+													<td>TRUE</td>
+												</tr>
+												<tr>
+													<td>Fascist oligarchs now control the USA</td>
+													<td>en</td>
+													<td>TRUE</td>
+												</tr>
+												<tr>
+													<td>Someone end this lunatic before he starts ethnic cleansing</td>
+													<td>en</td>
+													<td>TRUE</td>
+												</tr>
+												<tr>
+													<td>The EU is increasing military aid to Ukraine to one billion euros the press release on the website of the Council of Europe.</td>
+													<td>en</td>
+													<td>FALSE</td>
+												</tr>
+												<tr>
+													<td>House drafts bill to strike Iran proxies amid IsraelHamas</td>
+													<td>en</td>
+													<td>FALSE</td>
+												</tr>
+												<tr>
+													<td>Contested races across county early voting</td>
+													<td>en</td>
+													<td>FALSE</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 
-    <h3><i class="bi bi-database-fill"></i> Data Description</h3>
-    <p>The dataset is sourced from news websites, Reddit, blogs, Bluesky, and regional forums, covering event types like elections, conflicts, gender rights, migration, and more. Each language includes between 3,000 and 5,000 annotated instances.</p>
+									<hr class="major" />
 
-    <p>Annotation tools used include Label Studio, Prolific, Potato, and Mechanical Turk.</p>
+									<h2>Subtask 2: Polarization Type Classification</h2>
+									<p><strong>Multi-label classification</strong> to identify the target of polarization as one of the following categories: Gender/Sexual, Political, Religious, Racial/Ethnic, or Other.</p>
 
-    <h3><i class="bi bi-graph-up-arrow"></i> Research Contributions</h3>
-    <p>This task aims to advance socially responsible AI by supporting NLP for low-resource languages and fostering explainable and inclusive NLP systems. It will help establish multilingual benchmarks for polarization detection, promoting fair and transparent computational approaches to understanding societal divisions.</p>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Text</th>
+													<th>Lang</th>
+													<th>Gender/Sexual</th>
+													<th>Political</th>
+													<th>Religious</th>
+													<th>Racial/Ethnic</th>
+													<th>Other</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Find yourself a west bank settler gf</td>
+													<td>en</td>
+													<td>1</td>
+													<td>1</td>
+													<td>0</td>
+													<td>0</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>Fascist oligarchs now control the USA</td>
+													<td>en</td>
+													<td>0</td>
+													<td>1</td>
+													<td>0</td>
+													<td>0</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>Someone end this lunatic before he starts ethnic cleansing</td>
+													<td>en</td>
+													<td>0</td>
+													<td>1</td>
+													<td>0</td>
+													<td>1</td>
+													<td>0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 
-    <h3><i class="bi bi-calendar-week"></i> Timeline</h3>
-    <ul>
-      <li>31 March 2025: Call for Participation Opens / Task Proposals Due</li>
-      <li>8 August 2025: Trial Data Released</li>
-      <li>1 September 2025: Training Data Released</li>
-      <li>1 December 2025: Test Data Released (internal deadline; not for public release)/li>
-      <li>10 January 2026: System Submission Deadline / Evaluation Start</li>
-      <li>1 January 2026: Evaluation Results Released / Evaluation End</li>
-      <li>February 2026: System Paper Submission Deadline</li>
-      <li>March 2026: Notification of Acceptance</li>
-      <li>April 2026: Camera-Ready Papers Due</li>
-      <li>Summer 2026: SemEval-2026 Workshop at [Conference Location TBD]</li>
-      <li>Workshop at SemEval 2026: TBD</li>
-    </ul>
+									<hr class="major" />
 
-    <h3><i class="bi bi-people-fill"></i> Who Should Participate?</h3>
-    <p>This task welcomes participation from:</p>
-    <ul>
-      <li>NLP researchers and developers</li>
-      <li>Computational social science teams</li>
-      <li>Practitioners working on hate speech and misinformation</li>
-      <li>Peacebuilding and civil society organizations</li>
-      <li>Students and academics from cross-disciplinary backgrounds</li>
-    </ul>
+									<h2>Subtask 3: Manifestation Identification</h2>
+									<p><strong>Multi-label classification</strong> to classify how polarization is expressed, with multiple possible labels including Vilification, Extreme Language, Stereotype, Invalidation, Lack of Empathy, and Dehumanization.</p>
 
-    <h3><i class="bi bi-person-vcard"></i> Organizing Team</h3>
-    <p>The POLAR task is organized by researchers from:</p>
-    <ul>
-      <li>University of Hamburg</li>
-      <li>Bahir Dar University</li>
-      <li>Macquarie University</li>
-      <li>Imperial College London</li>
-      <li>University of Pretoria</li>
-      <li>Zayed University</li>
-      <li>Bayero University Kano</li>
-      <li>Northeastern University</li>
-    </ul>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Text</th>
+													<th>Lang</th>
+													<th>Vilification</th>
+													<th>Extreme Language</th>
+													<th>Stereotype</th>
+													<th>Invalidation</th>
+													<th>Lack of Empathy</th>
+													<th>Dehumanization</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Find yourself a west bank settler gf</td>
+													<td>en</td>
+													<td>1</td>
+													<td>0</td>
+													<td>1</td>
+													<td>0</td>
+													<td>0</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>Fascist oligarchs now control the USA</td>
+													<td>en</td>
+													<td>1</td>
+													<td>1</td>
+													<td>0</td>
+													<td>0</td>
+													<td>0</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>Someone end this lunatic before he starts ethnic cleansing</td>
+													<td>en</td>
+													<td>1</td>
+													<td>1</td>
+													<td>1</td>
+													<td>0</td>
+													<td>0</td>
+													<td>0</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 
-    <h3><i class="bi bi-envelope-at"></i> Contact and Community</h3>
-    <p>For questions or to join the community, reach out via email at 
-      <a href="mailto:polarization-semeval-2026-organisers@googlegroups.com">polarization-semeval-2026-organisers@googlegroups.com</a>.
-      Stay connected through the Discord channel, mailing list, and GitHub repository (links to be announced soon).</p>
-  </div>
-</section>
+									<hr class="major" />
 
-<footer class="footer-section text-center">
-  <div class="footer-container">
-    <img src="assets/logo-small.png" alt="POLAR Task Logo" style="width: 80px; height:auto; margin-bottom:12px;"/>
-    <p class="mb-0">&copy; 2026 POLAR Shared Task. All rights reserved.</p>
-    <p>Made with <span style="color:#ff5e6c;">&#10084;</span> by the POLAR Team</p>
-  </div>
-</footer>
+									<h2>Languages Covered</h2>
+									<p>The task covers <strong>22 languages</strong> across different cultural and geographical contexts:</p>
+									<p>German, Spanish, English, Arabic, Hausa, Urdu, Amharic, Italian, Russian, Burmese (Myanmar), Chinese, Nepali, Hindi, Telugu, Persian (Farsi), Turkish, Bengali, Somali, Portuguese (Brazilian), Emakhuwa, Portuguese (Mozambican), and Igbo (Nigeria).</p>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+									<hr class="major" />
+
+									<h2>Dataset Information</h2>
+									<p>Data sources include news websites, Reddit, blogs, Bluesky, and regional forums, covering events such as elections, conflicts, gender rights, migration, and more. Each language contains 3,000–5,000 annotated instances.</p>
+									
+									<p><strong>Download Links:</strong></p>
+									<ul>
+										<li><a href="https://github.com/Polar-SemEval/trial-data" target="_blank">Trial Data Repository</a></li>
+									</ul>
+
+								</section>
+
+                            <!-- Footer -->
+                                <footer>
+                                    <div class="inner">
+                                        <p>&copy; 2026 POLAR Shared Task. All rights reserved. Adapted from Editorial Template by <a href="https://html5up.net">HTML5 UP</a></p>
+                                    </div>
+                                </footer>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="/">Homepage</a></li>
+										<li><a href="tasks.html">Tasks & Subtasks</a></li>
+										<li><a href="participation.html">How to Participate</a></li>
+										<li><a href="faq.html">FAQs</a></li>
+										<li><a href="dates.html">Important Dates</a></li>
+										<li><a href="resources.html">Resources</a></li>
+										<li><a href="communication.html">Communication</a></li>
+										<li><a href="organizers.html">Organizers</a></li>
+										<li><a href="announcements/">Announcements</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
