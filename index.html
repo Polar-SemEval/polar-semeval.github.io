@@ -9,19 +9,28 @@
   <link rel="stylesheet" href="assets/style.css" />
 
   <style>
-    .hero-section {
-      position: relative;
-      min-height: 100vh; /* full height */
-      background: url('your-background.jpg') no-repeat center center/cover;
-    }
+.hero-section {
+  position: relative;
+  background: #f8d7e5; /* your pink color */
+  background-size: cover;      /* makes background responsive */
+  background-position: center; /* keeps focus on center */
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 80px 20px;          /* spacing that shrinks on phones */
+}
 
-    .hero-section .overlay {
-      background: rgba(255, 255, 255, 0.8); /* adjust opacity */
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-    }
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 15px;        /* less padding on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 40px 10px;        /* even less padding on phones */
+  }
+}
+
 
   </style>
 
