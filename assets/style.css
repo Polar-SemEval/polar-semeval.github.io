@@ -87,14 +87,15 @@ footer {
 
 .hero-section {
   background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
-  min-height: 30vh;      /* at least 30% of screen height */
-  padding: 3rem 1rem;    /* responsive spacing inside */
+  min-height: 30vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
+  padding: 3rem 1rem;    /* responsive spacing inside */
   text-align: center;    /* keeps text centered on mobile */
+
 }
 
 .overlay {
