@@ -1,9 +1,9 @@
 [
   {
-    "filename": "evaluation-period-begins.html",
-    "title": "Evaluation Period Now Open - Submit Your Final Models",
-    "date": "2025-08-31T14:30:00Z",
-    "summary": "The evaluation phase has officially begun! Teams can now submit up to 3 runs for each subtask. Remember, only your final submission will count for the official ranking. All submissions must be made through the CodaBench platform before the February 1st deadline.",
-    "tags": ["Critical", "Evaluation"]
+    "filename": "compitition-begins.html",
+    "title": "'Start of the Shared Task - Competition Begins!'",
+    "date": "2025-09-24T14:30:00Z",
+    "summary": "The competition has officially started! Participants can now make submissions for each subtask. Please note that only the final submission will be considered for the official ranking. All submissions must be submitted through the CodaBench platform before the current phase deadline.",
+    "tags": ["Critical", "Subtask"]
   }
 ]
