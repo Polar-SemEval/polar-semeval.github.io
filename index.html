@@ -16,7 +16,14 @@
 				body.menu-visible #banner .image.object img {
 					max-width: 70%; /* shrink further when menu is open */
 					transition: max-width 0.3s ease; /* smooth resizing */
-}
+				}
+
+				#banner .image.object img {
+					max-width: 100%;
+					height: auto;
+					object-fit: contain; /* keeps proportions */
+				}
+
 
 
 		</style>
