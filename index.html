@@ -12,12 +12,13 @@
 				gap: 10px; /* space between buttons */
 				align-items: flex-start; /* or center if you want them centered */
 			}
-
 			#banner .image.object img {
-				max-width: auto;
-				height: auto;
-				object-fit: contain; /* keeps proportions */
+			max-width: 100%;   /* keep within its container */
+			height: auto;      /* keep proportions */
+			display: block;    /* avoid inline duplication issues */
+			object-fit: contain;
 			}
+
 
 
 
