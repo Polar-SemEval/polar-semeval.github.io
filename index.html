@@ -18,6 +18,11 @@
 			display: block;    /* avoid inline duplication issues */
 			object-fit: contain;
 			}
+			body.menu-visible #banner .image.object {
+			max-width: 70%;  /* shrink when menu opens */
+			transition: max-width 0.3s ease;
+			overflow: hidden; /* prevents duplication */
+			}
 
 
 
