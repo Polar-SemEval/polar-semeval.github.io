@@ -2,8 +2,8 @@
   {
     "filename": "data-released-new.html",
     "title": "'Data Release Update - Subtasks 1, 2 & 3 Available in 6 Languages!'",
-    "date": "2025-09-12T14:30:00Z",
-    "summary": "We have released the training and development datasets for seven languages for subtask 1: Amharic (amh), Arabic (abr), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
+    "date": "2025-09-20T18:00:00Z",
+    "summary": "We have released the training and development datasets for six languages for subtask 1, 2 & 3: Amharic (amh), Arabic (abr), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
     "tags": ["Critical", "Subtask", "Data"]
   }
   ,
@@ -12,7 +12,7 @@
     "filename": "data-released.html",
     "title": "'First Batch of Data Release - Subtask 1 Data Available!'",
     "date": "2025-09-12T14:30:00Z",
-    "summary": "We have released the training and development datasets for seven languages for subtask 1: Amharic (amh), Arabic (abr), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
+    "summary": "We have released the training and development datasets for six languages for subtask 1: Amharic (amh), Arabic (abr), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
     "tags": ["Critical", "Subtask", "Data"]
   }
   ,
