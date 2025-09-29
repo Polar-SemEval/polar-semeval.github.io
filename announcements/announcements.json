@@ -1,9 +1,22 @@
 [
   {
+    "filename": "data-released.html",
+    "title": "'First Batch of Data Release - Subtask 1 Data Available!'",
+    "date": "2025-09-12T14:30:00Z",
+    "summary": "We have released the training and development datasets for seven languages for subtask 1: Amharic (amh), Arabic (abr), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
+    "tags": ["Critical", "Subtask", "Data"]
+  }
+  ,
+  
+  {
     "filename": "compitition-begins.html",
     "title": "'Start of the Shared Task - Competition Begins!'",
     "date": "2025-09-24T14:30:00Z",
     "summary": "The competition has officially started! Participants can now make submissions for each subtask. Please note that only the final submission will be considered for the official ranking. All submissions must be submitted through the CodaBench platform before the current phase deadline.",
     "tags": ["Critical", "Subtask"]
   }
+
+
+  
 ]
+
