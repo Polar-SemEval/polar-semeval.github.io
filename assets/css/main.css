@@ -128,9 +128,7 @@ em, i {
   font-style: italic; }
 
 p {
-  margin: 0 0 2em 0;
-  font-size: 1.2em;
-}
+  margin: 0 0 2em 0; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #3d4449;
@@ -993,7 +991,7 @@ section.special, article.special {
 
 header p {
   font-family: "Roboto Slab", serif;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: 400;
   letter-spacing: 0.075em;
   margin-top: -0.5em;
