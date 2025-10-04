@@ -1,40 +1,34 @@
 [
   {
     "filename": "data-released-HGI.html",
-    "title": "'Additional Languages Available - Subtask(s) Available in 9 Languages!'",
+    "title": "Additional Languages Available - Subtask(s) Available in 9 Languages!",
     "date": "2025-10-04T09:00:00Z",
     "summary": "We have released the training and development datasets for additional three languages: German(deu), Hausa(hau), and Italian(ita) where Italian (only participating in Subtask 1 and Subtask 2). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
-    "tags": ["Critical", "Subtask", "Data"]
+    "tags": ["Data", "Languages", "Subtask"]
   }
   ,
-
   {
-    "filename": "data-released-new.html",
-    "title": "'Data Release Update - Subtasks 1, 2 & 3 Available in 6 Languages!'",
-    "date": "2025-09-20T18:00:00Z",
-    "summary": "We have released the training and development datasets for six languages for subtask 1, 2 & 3: Amharic (amh), Arabic (arb), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
-    "tags": ["Critical", "Subtask", "Data"]
-  }
-  ,
-
-  {
-    "filename": "data-released.html",
-    "title": "'First Batch of Data Release - Subtask 1 Data Available!'",
-    "date": "2025-09-12T14:30:00Z",
-    "summary": "We have released the training and development datasets for six languages for subtask 1: Amharic (amh), Arabic (arb), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
-    "tags": ["Critical", "Subtask", "Data"]
-  }
-  ,
-  
-  {
-    "filename": "compitition-begins.html",
-    "title": "'Start of the Shared Task - Competition Begins!'",
+    "filename": "competition-begins.html",
+    "title": "Start of the Shared Task - Competition Begins!",
     "date": "2025-09-24T14:30:00Z",
     "summary": "The competition has officially started! Participants can now make submissions for each subtask. Please note that only the final submission will be considered for the official ranking. All submissions must be submitted through the CodaBench platform before the current phase deadline.",
-    "tags": ["Critical", "Subtask"]
+    "tags": ["Data", "Languages", "Subtask"]
   }
-
-
-  
+  ,
+  {
+    "filename": "subtask23start.html",
+    "title": "Data Release Update - Subtasks 1, 2 & 3 Available in 6 Languages!",
+    "date": "2025-09-23T18:00:00Z",
+    "summary": "We have released the training and development datasets for six languages for subtask 1, 2 & 3: Amharic (amh), Arabic (arb), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
+    "tags": ["Data", "Languages", "Subtask"]
+  }
+  ,
+  {
+    "filename": "subtask1start.html",
+    "title": "First Batch of Data Release - Subtask 1 Data Available!",
+    "date": "2025-09-16T14:30:00Z",
+    "summary": "We have released the training and development datasets for six languages for subtask 1: Amharic (amh), Arabic (arb), Chinese (zho), English (eng), Spanish (spa), and Urdu (urd). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
+    "tags": ["Data", "Languages", "Subtask"]
+  }
 ]
 
