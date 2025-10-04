@@ -1,5 +1,14 @@
 [
   {
+    "filename": "data-released-HGI.html",
+    "title": "'Additional Languages Available - Subtasks 1, 2 & 3 Available in 9 Languages!'",
+    "date": "2025-09-20T18:00:00Z",
+    "summary": "We have released the training and development datasets for additional three languages: German(deu), Hausa(hau), and Italian(ita) where Italian (only participating in Subtask 1 and Subtask 2). More languages are on the way, and we’ll be updating the website with release information over the next few days.",
+    "tags": ["Critical", "Subtask", "Data"]
+  }
+  ,
+
+  {
     "filename": "data-released-new.html",
     "title": "'Data Release Update - Subtasks 1, 2 & 3 Available in 6 Languages!'",
     "date": "2025-09-20T18:00:00Z",
