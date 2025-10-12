@@ -38,88 +38,89 @@
 								</header>
 							  
 								<style>
-								  /* ===== Accordion (Details) Animation ===== */
-								  details {
-									background: #f9f9f9;
-									border-radius: 8px;
-									margin-bottom: 10px;
-									padding: 0.8em 1em;
-									border: 1px solid #e0e0e0;
-									transition: all 0.3s ease;
-								  }
-							  
-								  details:hover {
-									background: #f7f4e9;
-									border-color: #d6cfa5;
-								  }
-							  
-								  summary {
-									font-weight: 600;
-									color: #21592e;
-									cursor: pointer;
-									list-style: none;
-									position: relative;
-									padding-right: 1.4em;
-								  }
-							  
-								  summary::marker {
-									display: none;
-								  }
-							  
-								  /* Custom arrow */
-								  summary::after {
-									content: "›";
-									position: absolute;
-									right: 0;
-									transform: rotate(90deg);
-									transition: transform 0.3s ease;
-									color: #ecae58;
-									font-weight: bold;
-								  }
-							  
-								  details[open] summary::after {
-									transform: rotate(270deg);
-								  }
-							  
-								  /* Smooth open animation */
-								  details > *:not(summary) {
-									overflow: hidden;
-									opacity: 0;
-									max-height: 0;
-									transition: all 0.4s ease;
-								  }
-							  
-								  details[open] > *:not(summary) {
-									opacity: 1;
-									max-height: 1000px;
-									margin-top: 0.6em;
-								  }
-							  
-								  h2 {
-									color: #21592e;
-									margin-top: 2em;
-									font-size: 1.4rem;
-									border-bottom: 2px solid #ecae58;
-									display: inline-block;
-									padding-bottom: 0.2em;
-								  }
-							  
-								  hr.major {
-									margin: 2em 0;
-									border: none;
-									border-top: 2px solid #ecae58;
-									width: 60%;
-								  }
-							  
-								  a {
-									color: #21592e;
-									text-decoration: underline;
-								  }
-							  
-								  a:hover {
-									color: #ecae58;
-								  }
-								</style>
+									/* ===== Accordion (Details) Styling for POLAR Theme ===== */
+									details {
+									  background: #fafafa;
+									  border-radius: 8px;
+									  margin-bottom: 10px;
+									  padding: 0.8em 1em;
+									  border: 1px solid #e0e0e0;
+									  transition: all 0.3s ease;
+									}
+								
+									details:hover {
+									  background: #fff;
+									  border-color: #e57373;
+									  box-shadow: 0 1px 4px rgba(229, 115, 115, 0.1);
+									}
+								
+									summary {
+									  font-weight: 600;
+									  color: #3d4042;
+									  cursor: pointer;
+									  list-style: none;
+									  position: relative;
+									  padding-right: 1.4em;
+									}
+								
+									summary::marker {
+									  display: none;
+									}
+								
+									/* Custom arrow */
+									summary::after {
+									  content: "›";
+									  position: absolute;
+									  right: 0;
+									  transform: rotate(90deg);
+									  transition: transform 0.3s ease;
+									  color: #e57373;
+									  font-weight: bold;
+									}
+								
+									details[open] summary::after {
+									  transform: rotate(270deg);
+									}
+								
+									/* Smooth accordion animation */
+									details > *:not(summary) {
+									  overflow: hidden;
+									  opacity: 0;
+									  max-height: 0;
+									  transition: all 0.35s ease;
+									}
+								
+									details[open] > *:not(summary) {
+									  opacity: 1;
+									  max-height: 1000px;
+									  margin-top: 0.6em;
+									}
+								
+									h2 {
+									  color: #3d4042;
+									  margin-top: 2em;
+									  font-size: 1.4rem;
+									  border-bottom: 2px solid #e57373;
+									  display: inline-block;
+									  padding-bottom: 0.2em;
+									}
+								
+									hr.major {
+									  margin: 2em 0;
+									  border: none;
+									  border-top: 2px solid #e57373;
+									  width: 60%;
+									}
+								
+									a {
+									  color: #e57373;
+									  text-decoration: underline;
+									}
+								
+									a:hover {
+									  color: #c94f4f;
+									}
+								  </style>
 							  
 								<!-- ======================= PARTICIPATION QUESTIONS ======================= -->
 								<h2>Participation Questions</h2>
