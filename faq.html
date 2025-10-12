@@ -37,6 +37,90 @@
 								  <h1>Frequently Asked Questions</h1>
 								</header>
 							  
+								<style>
+								  /* ===== Accordion (Details) Animation ===== */
+								  details {
+									background: #f9f9f9;
+									border-radius: 8px;
+									margin-bottom: 10px;
+									padding: 0.8em 1em;
+									border: 1px solid #e0e0e0;
+									transition: all 0.3s ease;
+								  }
+							  
+								  details:hover {
+									background: #f7f4e9;
+									border-color: #d6cfa5;
+								  }
+							  
+								  summary {
+									font-weight: 600;
+									color: #21592e;
+									cursor: pointer;
+									list-style: none;
+									position: relative;
+									padding-right: 1.4em;
+								  }
+							  
+								  summary::marker {
+									display: none;
+								  }
+							  
+								  /* Custom arrow */
+								  summary::after {
+									content: "›";
+									position: absolute;
+									right: 0;
+									transform: rotate(90deg);
+									transition: transform 0.3s ease;
+									color: #ecae58;
+									font-weight: bold;
+								  }
+							  
+								  details[open] summary::after {
+									transform: rotate(270deg);
+								  }
+							  
+								  /* Smooth open animation */
+								  details > *:not(summary) {
+									overflow: hidden;
+									opacity: 0;
+									max-height: 0;
+									transition: all 0.4s ease;
+								  }
+							  
+								  details[open] > *:not(summary) {
+									opacity: 1;
+									max-height: 1000px;
+									margin-top: 0.6em;
+								  }
+							  
+								  h2 {
+									color: #21592e;
+									margin-top: 2em;
+									font-size: 1.4rem;
+									border-bottom: 2px solid #ecae58;
+									display: inline-block;
+									padding-bottom: 0.2em;
+								  }
+							  
+								  hr.major {
+									margin: 2em 0;
+									border: none;
+									border-top: 2px solid #ecae58;
+									width: 60%;
+								  }
+							  
+								  a {
+									color: #21592e;
+									text-decoration: underline;
+								  }
+							  
+								  a:hover {
+									color: #ecae58;
+								  }
+								</style>
+							  
 								<!-- ======================= PARTICIPATION QUESTIONS ======================= -->
 								<h2>Participation Questions</h2>
 							  
@@ -184,7 +268,7 @@
 							  
 								<details>
 								  <summary>The platform shows “Internal Error.” What should I do?</summary>
-								  <p>This usually happens if your submission format doesn’t match the expected structure. Verify that your file follows the required format described in the evaluation page, then re-submit.</p>
+								  <p>This usually happens if your submission format doesn’t match the expected structure. Verify that your file follows the required format described on the evaluation page, then re-submit.</p>
 								</details>
 							  
 								<details>
@@ -202,6 +286,7 @@
 								  <p>Submissions are only visible within your team. Make sure all members are added under the same organization on Codabench using the <strong>“Invite Members”</strong> option.</p>
 								</details>
 							  </section>
+							  
 							  
 
                             <!-- Footer -->
