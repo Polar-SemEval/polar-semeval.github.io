@@ -81,7 +81,17 @@
 									<hr class="major" />
 
 									<h2>Subtask 1: Polarization Detection</h2>
-									<p><strong>Binary classification</strong> to determine whether a post contains polarized content (Polarized or Not Polarized).</p>
+									<p>
+										If a text includes one or more of the polarized specified characteristics, it is classified as polarized. Conversely, social media texts that do not display any of these characteristics are classified as non-polarized. 
+										Therefore, a given text is classified into one of two categories:
+											<ol>
+												<li>Text that contains/shows polarized opinion (Yes)</li>
+												<li>Text that does not contain polarized opinion (No)</li>
+											</ol>
+									
+										Note: Only texts that clearly reflect attitude polarization are classified as such, with consideration of the context and the overall meaning of the text, not just individual words or phrases.
+									</p>
+									<p><strong>Subtask-1: Binary classification</strong> to determine whether a post contains polarized content (Polarized or Not Polarized).</p>
 
 									<div class="table-wrapper">
 										<table>
@@ -134,7 +144,20 @@
 									<hr class="major" />
 
 									<h2>Subtask 2: Polarization Type Classification</h2>
-									<p><strong>Multi-label classification</strong> to identify the target of polarization as one of the following categories: Political, Racial/Ethnic, Religious, Gender/Sexual or Other.</p>
+									<p>
+										Looking at the given social media texts, the type or target polarization is classified as follows:
+											<ol>
+												<li><strong>Political/ideological polarization:</strong> This type of extremism focuses on division, intolerance, and conflict between political parties and followers. Political polarization refers to political beliefs and affiliations becoming more extreme. People may identify more strongly with their political party, leading to deeper divides and a reduced willingness to compromise. It broadens ideological differences between political groups.</li>
+												<li><strong>Racial or ethnic polarization:</strong> This type of polarization focuses on ethnic identity or racial origin and incites division, intolerance, and conflict between ethnic groups or races. This type of polarization arises when individuals identify more strongly with their own racial or ethnic group, leading to increased separation, mistrust, or conflict with individuals from other groups.</li>
+												<li><strong>Religious polarization:</strong> This type of polarization focuses on religious identity and incites division, intolerance, and conflict between religious followers.</li>
+												<li>
+													<strong>Gender polarization:</strong> This type of polarization refers to the exclusion, discrimination, and marginalization of individuals based on their gender.
+													<strong>Sexual orientation polarization:</strong> This refers to the increasing division and distinction between different sexual orientations within society, often leading to heightened tensions, misunderstandings, conflicts, or marginalization among various groups.
+												</li>
+												<li><strong>Other:</strong> polarization texts targeting other groups/identities such as economy, technology, media, polarization, etc.</li>
+											</ol>
+									</p>
+									<p><strong>Subtastk-2: Multi-label classification</strong> to identify the target of polarization as one of the following categories: Political, Racial/Ethnic, Religious, Gender/Sexual or Other.</p>
 
 									<div class="table-wrapper">
 										<table>
@@ -187,6 +210,32 @@
 									<hr class="major" />
 
 									<h2>Subtask 3: Manifestation Identification</h2>
+									<p>
+										A message/ text on social media is considered to be polarizing if it exhibits one or more of the following characteristics:
+										<ol>
+											<li><strong>Stereotype:</strong> This manifestation occurs when a message generalizes certain characteristics of individuals to all members of a group, ignoring individual differences. Stereotypes simplify complex personalities into one-size-fits-all representations. 
+											  <em>Example:</em> “Migrants/whites/blacks are greedy, cowardly, and sexist.” “Men are strong.” “Women are weak.”</li>
+										  
+											<li><strong>Vilification:</strong> Vilification appears when a text defames or demonizes a particular group, person, or entity, often inciting fear through exaggeration, misrepresentation, or biased framing that portrays the subject in a harmful or negative light. 
+											  <em>Example:</em> “Migrants/whites/blacks are oppressive, traitors, or bandits.”</li>
+										  
+											<li><strong>Dehumanization:</strong> This occurs when language strips a group or individual of human qualities or dignity, often by comparing them to animals, machines, or objects, or by otherwise denying their humanity and individuality. 
+											  <em>Example:</em> Referring to people or groups as “hyenas,” “snakes,” or “cockroaches.”</li>
+										  
+											<li><strong>Deindividuation:</strong> Deindividuation manifests when individuals are dehumanized through the erasure of their unique characteristics or personal identities. It emphasizes group identity in a way that portrays all members as identical or interchangeable. 
+											  <em>Example:</em> “All migrants or blacks/whites are thieves or robbers.”</li>
+										  
+											<li><strong>Extreme Language and Absolutism:</strong> This manifestation involves the use of extreme or absolutist language that reflects polarized attitudes, such as words like “always,” “never,” “worst,” or “best.” It often presents issues in dichotomous terms such as “us vs. them” or “right vs. wrong.” 
+											  <em>Example:</em> “Migrants/Arabs/Russians are never to be trusted. We and they cannot live together.”</li>
+										  
+											<li><strong>Lack of Empathy or Understanding:</strong> This occurs when the text shows no empathy or understanding for others’ perspectives or experiences. It may involve marginalizing alternative viewpoints or refusing to understand or relate to them. 
+											  <em>Example:</em> “Wearing the hijab or cross-dressing is a sign of extremism.”</li>
+										  
+											<li><strong>Invalidation:</strong> Invalidation appears when a text denies or rejects the identity or existence of certain people or groups, dismissing their legitimacy or right to exist. 
+											  <em>Example:</em> “There is no nation called Palestine/Israel. We do not allow them to exist.”</li>
+										  </ol>
+										  
+									</p>
 									<p><strong>Multi-label classification</strong> to classify how polarization is expressed, with multiple possible labels including Stereotype, Vilification, Dehumanization, Extreme Language, Lack of Empathy", or Invalidation.</p>
 									<p><strong>NOTE: Italian and Russian languages are not included in this subtask.</strong></p>
 									<div class="table-wrapper">
