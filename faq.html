@@ -32,67 +32,177 @@
 								</header>
 
 							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Frequently Asked Questions</h1>
-									</header>
-
-									<h2>Participation Questions</h2>
-
-									<h3>Do I have to participate in all 3 subtasks?</h3>
-									<p>No. You may choose one or more subtasks.</p>
-
-									<h3>Do I have to participate in all languages for a given subtask?</h3>
-									<p>No. You may choose one or more languages.</p>
-
-									<h3>When will all datasets for the 22 languages be released?</h3>
-									<p>We will announce the release of each dataset as it becomes available. Currently, datasets for <strong>9 languages</strong> have been released, and the remaining ones will follow soon.</p>
-
-									<h3>How will you verify my submitted model?</h3>
-									<p>To be included in the final team rankings, participants must submit a system description paper detailing their approach and methodology. This ensures transparency and scientific integrity.</p>
-
-									<h3>Will I be included in the final ranking if I do not write a system description paper?</h3>
-									<p>No. A system description paper is mandatory for inclusion in the final ranking.</p>
-
-									<h3>I have never written a system description paper. How can I write one?</h3>
-									<p>We will provide an online tutorial and resources to help guide you.</p>
-
-									<hr class="major" />
-
-									<h2>Data and Methodology</h2>
-
-									<h3>When will you release the gold labels?</h3>
-									<ul>
-										<li><strong>Dev set:</strong> Released at the start of the evaluation phase.</li>
-										<li><strong>Test set(s):</strong> Released only after the competition ends.</li>
-									</ul>
-
-									<h3>Can I use LLMs in the different subtasks?</h3>
-									<p>Yes.</p>
-
-									<h3>Can I use additional datasets (e.g., publicly available ones)?</h3>
-									<p>Yes, but you must cite them properly in your system description paper.</p>
-
-									<h3>How was the data collected?</h3>
-									<ul>
-										<li>Data sources include news websites, Reddit, blogs, Bluesky, and regional forums, covering events such as elections, conflicts, gender rights, migration, and more.</li>
-										<li>Each language contains 3,000–5,000 annotated instances. Annotation platforms include Label Studio, Prolific, Potato, and Mechanical Turk.</li>
-									</ul>
-
-									<h3>How was the data annotated, and did you use LLMs?</h3>
-									<p>No LLMs were used. All data was annotated by at least three native speakers per instance.</p>
-
-									<hr class="major" />
-
-									<h2>Publication and Conference</h2>
-
-									<h3>Do I need to pay conference registration fees or attend SemEval for my paper to be published?</h3>
-									<p>No. Publication does not require attendance. If you do not attend the workshop, you do not need to pay any fees. If you do wish to attend, standard registration fees apply.</p>
-
-									<h3>Our system did not perform well. Should I still write a system description paper?</h3>
-									<p>Yes! We strongly encourage all teams to submit a paper. Negative results are valuable to the community and will help advance research on polarization.</p>
-
-								</section>
+							<section>
+								<header class="main">
+								  <h1>Frequently Asked Questions</h1>
+								</header>
+							  
+								<!-- ======================= PARTICIPATION QUESTIONS ======================= -->
+								<h2>Participation Questions</h2>
+							  
+								<details>
+								  <summary>Do I have to participate in all three subtasks?</summary>
+								  <p>No. You may choose to participate in one or more subtasks.</p>
+								</details>
+							  
+								<details>
+								  <summary>Do I have to work on all languages for a given subtask?</summary>
+								  <p>No. You can choose one or more languages.</p>
+								</details>
+							  
+								<details>
+								  <summary>Am I allowed to participate in more than one language simultaneously?</summary>
+								  <p>Yes. You may work on multiple languages at the same time.</p>
+								</details>
+							  
+								<details>
+								  <summary>When will all datasets for the 21 languages be released?</summary>
+								  <p>We will announce the release of each dataset as it becomes available. Currently, datasets for <strong>9 languages</strong> have been released, and the remaining ones will follow soon.</p>
+								</details>
+							  
+								<details>
+								  <summary>How will you verify my submitted model?</summary>
+								  <p>To be included in the final team rankings, participants must submit a <strong>system description paper</strong> detailing their approach and methodology. This ensures transparency and scientific integrity.</p>
+								</details>
+							  
+								<details>
+								  <summary>Will I be included in the final ranking if I do not submit a system description paper?</summary>
+								  <p>No. A system description paper is mandatory for inclusion in the final ranking.</p>
+								</details>
+							  
+								<details>
+								  <summary>I have never written a system description paper. How can I write one?</summary>
+								  <p>We will provide an online tutorial and resources to guide you through the process.</p>
+								</details>
+							  
+								<details>
+								  <summary>Can we work as a team, or must everyone participate individually?</summary>
+								  <p>Each participant can be part of <strong>only one team</strong>. If you believe there are special circumstances that require you to join more than one team, please email us before the evaluation period begins.</p>
+								  <p>You may work either as part of a team or independently — but not both.</p>
+								</details>
+							  
+								<details>
+								  <summary>I want to add someone to my team but can’t find how to do that on Codabench. How can I add members?</summary>
+								  <p>To add members to your team on Codabench:</p>
+								  <ul>
+									<li>Click your account name in the upper-right corner and select your organization.</li>
+									<li>On the organization page, click <strong>“Edit Organization”</strong> in the upper-left corner.</li>
+									<li>Scroll to the bottom and click the green <strong>“Invite Members”</strong> button to add teammates.</li>
+								  </ul>
+								</details>
+							  
+								<hr class="major" />
+							  
+								<!-- ======================= DATA AND METHODOLOGY ======================= -->
+								<h2>Data and Methodology</h2>
+							  
+								<details>
+								  <summary>When will you release the gold labels?</summary>
+								  <ul>
+									<li><strong>Dev set:</strong> Released at the start of the evaluation phase.</li>
+									<li><strong>Test set(s):</strong> Released after the competition ends.</li>
+								  </ul>
+								</details>
+							  
+								<details>
+								  <summary>Can I use large language models (LLMs) in the subtasks?</summary>
+								  <p>Yes.</p>
+								</details>
+							  
+								<details>
+								  <summary>Are there restrictions on the types or sizes of LLMs or on how we use them for data augmentation?</summary>
+								  <p>No. You may use any type or size of model — open-source or closed-source. You may also generate or use synthetic data for augmentation.</p>
+								</details>
+							  
+								<details>
+								  <summary>Can I use additional datasets (e.g., publicly available ones)?</summary>
+								  <p>Yes, but you must properly cite all external datasets in your system description paper.</p>
+								</details>
+							  
+								<details>
+								  <summary>How was the data collected?</summary>
+								  <ul>
+									<li>Data sources include news websites, Reddit, blogs, Bluesky, and regional forums, covering topics such as elections, conflicts, gender rights, and migration.</li>
+									<li>Each language dataset contains approximately 3,000–5,000 annotated instances. Annotation platforms include Label Studio, Prolific, Potato, and Mechanical Turk.</li>
+								  </ul>
+								</details>
+							  
+								<details>
+								  <summary>How was the data annotated? Were LLMs used?</summary>
+								  <p>No. All data was annotated by at least three native speakers per instance — no LLMs were used.</p>
+								</details>
+							  
+								<details>
+								  <summary>I cannot find the link to download the files under the “Files” tab on Codabench. How can I access the datasets?</summary>
+								  <p>You can access all dataset download links through this document:
+									<a href="https://docs.google.com/document/d/1pffhec5teDvXrnfAg-OBJvXZ0B45--GQRfhoxeGfOyc/edit?tab=t.0" target="_blank">
+									  Google Drive Dataset Access Guide
+									</a>.
+								  </p>
+								</details>
+							  
+								<details>
+								  <summary>What is the “starter pack” uploaded in the Files tab? Should we use it?</summary>
+								  <p>The starter pack is an example to help you get started with the data. You may use it as a reference or build your own approach from scratch.</p>
+								</details>
+							  
+								<details>
+								  <summary>I’ve downloaded the starter and public_data files. The public_data file includes multiple subtasks — what’s the difference, and do I need all of them?</summary>
+								  <p>The public data contain all subtasks, so you only need to download them once even if you plan to participate in multiple subtasks.</p>
+								  <p>The starter pack includes a sample notebook that trains a small BERT model for demonstration. You are free to use your own code and models instead.</p>
+								</details>
+							  
+								<hr class="major" />
+							  
+								<!-- ======================= PUBLICATION AND CONFERENCE ======================= -->
+								<h2>Publication and Conference</h2>
+							  
+								<details>
+								  <summary>Do I need to pay conference registration fees or attend SemEval for my paper to be published?</summary>
+								  <p>No. Publication does not require attendance. If you do not attend the workshop, you do not need to pay any fees. If you wish to attend, standard registration fees apply.</p>
+								</details>
+							  
+								<details>
+								  <summary>Our system did not perform well. Should we still write a system description paper?</summary>
+								  <p>Yes. We strongly encourage all teams to submit a paper. Negative results are equally valuable and contribute to advancing research on polarization.</p>
+								</details>
+							  
+								<hr class="major" />
+							  
+								<!-- ======================= TECHNICAL ISSUES ON CODABENCH ======================= -->
+								<h2>Technical Issues on Codabench</h2>
+							  
+								<details>
+								  <summary>It’s been several hours since I submitted my file, but the status still shows “running.”</summary>
+								  <p>Codabench may occasionally experience delays in processing submissions. Please refresh the page after a few minutes. If the issue persists, try resubmitting your file.</p>
+								</details>
+							  
+								<details>
+								  <summary>My submission failed, but I’m not sure why. How can I check the error?</summary>
+								  <p>Click on your submission in the leaderboard or the “My Submissions” tab. You can view the error log under the <strong>“Output”</strong> section to see detailed feedback about the failure.</p>
+								</details>
+							  
+								<details>
+								  <summary>The platform shows “Internal Error.” What should I do?</summary>
+								  <p>This usually happens if your submission format doesn’t match the expected structure. Verify that your file follows the required format described in the evaluation page, then re-submit.</p>
+								</details>
+							  
+								<details>
+								  <summary>I uploaded the wrong file. Can I delete or replace my submission?</summary>
+								  <p>You cannot delete a submission, but you can simply re-submit a new file. Only the latest valid submission will be considered for the leaderboard during evaluation.</p>
+								</details>
+							  
+								<details>
+								  <summary>I cannot see the “Submit” button on Codabench. How can I upload my file?</summary>
+								  <p>Ensure you are logged in and registered for the competition. The “Submit” button appears under the corresponding subtask page once registration is complete.</p>
+								</details>
+							  
+								<details>
+								  <summary>My team members can’t see our submissions. Why?</summary>
+								  <p>Submissions are only visible within your team. Make sure all members are added under the same organization on Codabench using the <strong>“Invite Members”</strong> option.</p>
+								</details>
+							  </section>
+							  
 
                             <!-- Footer -->
                                 <footer>
