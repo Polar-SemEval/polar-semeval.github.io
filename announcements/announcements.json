@@ -1,5 +1,13 @@
 [
   {
+    "filename": "data-released-261025.html",
+    "title": "Additional Languages Available - Subtask(s) Available in 13 Languages!",
+    "date": "2025-10-26T14:00:00Z",
+    "summary": "We have released the training and development datasets for additional four languages: Hindi (hin), Nepali (nep), Persian (fas), and Turkish (tur). More languages are on the way, and we’ll be updating the website with release information once available.",
+    "tags": ["Data", "Languages", "Subtask"]
+  }
+  ,
+  {
     "filename": "data-released-HGI.html",
     "title": "Additional Languages Available - Subtask(s) Available in 9 Languages!",
     "date": "2025-10-04T09:00:00Z",
