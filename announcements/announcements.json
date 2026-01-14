@@ -1,5 +1,13 @@
 [
   {
+    "filename": "extended_deadline.html",
+    "title": "Evaluation Phase Extended - New Deadlind is 24 January 23:59 UTC-12",
+    "date": "2026-01-14T12:30:00Z",
+    "summary": "After some internal discussions, we decided to change the date of the eval phase and also some additional changes.\nWe extended the deadline for the development phase to 24 January 23:59 UTC-12.",
+    "tags": ["Date", "Evaluation", "Subtask"]
+  }
+  ,
+  {
     "filename": "data-released-041225.html",
     "title": "Additional Languages Available - Subtask(s) Available in All 22 Languages!",
     "date": "2025-12-04T13:00:00Z",
