@@ -1,4 +1,12 @@
 [
+    {
+    "filename": "dataset-bib-file.html",
+    "title": "Citation Requirement – Official BibTeX Entry Released",
+    "date": "2026-02-12T09:00:00Z",
+    "summary": "The official BibTeX entry for citing the POLAR dataset in your system description paper is now available. You MUST cite the provided reference in your submission. Please click the link to see the full citation details.",
+    "tags": ["Citation", "BibTeX", "Paper"]
+  }
+  ,
   {
     "filename": "extended_deadline.html",
     "title": "Evaluation Phase Extended - New Deadlind is 24 January 23:59 UTC-12",
