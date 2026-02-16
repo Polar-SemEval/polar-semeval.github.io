@@ -1,10 +1,10 @@
 [
     {
-    "filename": "dataset-bib-file.html",
-    "title": "Citation Requirement – Official BibTeX Entry Released",
-    "date": "2026-02-12T09:00:00Z",
-    "summary": "The official BibTeX entry for citing the POLAR dataset in your system description paper is now available. You MUST cite the provided reference in your submission. Please click the link to see the full citation details.",
-    "tags": ["Citation", "BibTeX", "Paper"]
+    "filename": "unofficial-ranking-released.html",
+    "title": "Unofficial Rankings Released - Check Your Performance!",
+    "date": "2026-01-14T12:30:00Z",
+    "summary": "The unofficial rankings for the evaluation phase have been released! Participants can now check their performance on the leaderboard. Please note that these rankings are unofficial and may be subject to change after a thorough review of the submissions. We will announce the official rankings and winners after the review process is complete.",
+    "tags": ["Ranking", "Evaluation", "Subtask"]
   }
   ,
   {
