@@ -1,15 +1,180 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Important Dates - POLAR @ SemEval-2026</title>
+		<title>Results - POLAR @ SemEval-2026</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
 			.centered-image {
-				display: block; /* Makes the image a block-level element */
-				margin: 0 auto; /* Centers the block-level image horizontally */
+				display: block;
+				margin: 0 auto;
+			}
+
+			.results-hero {
+				background: linear-gradient(135deg, rgba(245, 106, 106, 0.12) 0%, rgba(255, 255, 255, 0.98) 55%, rgba(61, 68, 73, 0.04) 100%);
+				border: solid 1px rgba(210, 215, 217, 0.75);
+				border-radius: 1.15em;
+				padding: 3em 2.5em;
+				margin-bottom: 2.5em;
+			}
+
+			.results-hero p:last-child {
+				margin-bottom: 0;
+			}
+
+			.results-eyebrow {
+				color: #f56a6a;
+				font-size: 0.85em;
+				font-weight: 700;
+				letter-spacing: 0.18em;
+				margin-bottom: 1em;
+				text-transform: uppercase;
+			}
+
+			.results-actions {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.85em;
+				margin-top: 2em;
+			}
+
+			.results-metrics {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 1em;
+				margin: 2em 0 0;
+			}
+
+			.metric-card {
+				background: #ffffff;
+				border: solid 1px rgba(210, 215, 217, 0.75);
+				border-radius: 0.9em;
+				padding: 1.25em 1.2em;
+			}
+
+			.metric-card strong {
+				color: #f56a6a;
+				display: block;
+				font-size: 1.9em;
+				line-height: 1;
+				margin-bottom: 0.35em;
+			}
+
+			.metric-card span {
+				color: #7f888f;
+				display: block;
+				font-size: 0.9em;
+				line-height: 1.5;
+			}
+
+			.highlight-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1.25em;
+				margin-bottom: 2.5em;
+			}
+
+			.highlight-card {
+				border: solid 1px rgba(210, 215, 217, 0.75);
+				border-radius: 1em;
+				padding: 1.5em;
+				position: relative;
+			}
+
+			.highlight-card h3 {
+				margin-bottom: 0.75em;
+			}
+
+			.highlight-label {
+				color: #f56a6a;
+				font-size: 0.8em;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+
+			.highlight-team {
+				font-size: 1.35em;
+				font-weight: 700;
+				margin: 0.45em 0 0.2em;
+			}
+
+			.highlight-score {
+				color: #3d4449;
+				font-size: 1em;
+				font-weight: 600;
+				margin-bottom: 0.6em;
+			}
+
+			.results-section-header {
+				align-items: flex-start;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1em;
+				justify-content: space-between;
+				margin-bottom: 1em;
+			}
+
+			.results-section-header p {
+				margin-bottom: 0;
+				max-width: 42em;
+			}
+
+			.score-pill {
+				background: rgba(245, 106, 106, 0.1);
+				border-radius: 999px;
+				color: #c74f4f;
+				display: inline-block;
+				font-size: 0.82em;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				padding: 0.5em 0.9em;
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+
+			.results-note {
+				background: rgba(245, 106, 106, 0.06);
+				border-left: solid 5px #f56a6a;
+				border-radius: 0.5em;
+				padding: 1.2em 1.25em;
+			}
+
+			.results-note p:last-child {
+				margin-bottom: 0;
+			}
+
+			.results-table table tbody tr.top-row td {
+				font-weight: 700;
+			}
+
+			.team-tag {
+				background: rgba(61, 68, 73, 0.07);
+				border-radius: 999px;
+				display: inline-block;
+				font-size: 0.8em;
+				font-weight: 600;
+				padding: 0.2em 0.7em;
+			}
+
+			@media screen and (max-width: 980px) {
+				.results-metrics,
+				.highlight-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
 				}
+			}
+
+			@media screen and (max-width: 736px) {
+				.results-hero {
+					padding: 2em 1.5em;
+				}
+
+				.results-metrics,
+				.highlight-grid {
+					grid-template-columns: 1fr;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -33,52 +198,121 @@
 
 							<!-- Content -->
 								<section>
-									<header class="main">
-										<h1>Important Dates and Task Phases</h1>
+									<div class="results-hero">
+										<p class="results-eyebrow">POLAR Shared Task Results</p>
+										<header class="main">
+											<h1>Participants Results</h1>
+										</header>
+
+										<p>This page highlights the official leaderboard snapshots for the POLAR shared task across the three subtasks: polarization detection, polarization type classification, and manifestation identification.</p>
+										<p>Inspired by leaderboard-style project pages, the layout below is designed to make top systems, rankings, and evaluation notes easy to scan at a glance while still fitting the visual language of the POLAR website.</p>
+
+										<div class="results-actions">
+											<a href="https://github.com/Polar-SemEval/Leaderboards" target="_blank" rel="noopener noreferrer" class="button primary">View Official Leaderboards</a>
+											<a href="participation.html" class="button">Evaluation Rules</a>
+										</div>
+
+										<div class="results-metrics">
+											<div class="metric-card">
+												<strong>3</strong>
+												<span>Subtasks covered on this results page.</span>
+											</div>
+											<div class="metric-card">
+												<strong>22</strong>
+												<span>Languages represented in the shared task benchmark.</span>
+											</div>
+											<div class="metric-card">
+												<strong>Macro F1</strong>
+												<span>Primary evaluation metric used for all subtasks.</span>
+											</div>
+											<div class="metric-card">
+												<strong>2026</strong>
+												<span>SemEval edition for the POLAR leaderboard release.</span>
+											</div>
+										</div>
+									</div>
+
+									<header class="major">
+										<h2>Top Systems at a Glance</h2>
 									</header>
 
-									<p>Keep track of the key milestones for your participation in the Polar task. All deadlines are <strong>11:59 PM AoE (Anywhere on Earth)</strong>.</p>
+									<div class="highlight-grid">
+										<div class="highlight-card">
+											<div class="highlight-label">Subtask 1</div>
+											<h3>Polarization Detection</h3>
+											<p class="highlight-team">Team Name / Institution</p>
+											<p class="highlight-score">Macro F1: XX.XX</p>
+											<p>Use this card to spotlight the best-performing submission for the binary detection setting.</p>
+										</div>
+										<div class="highlight-card">
+											<div class="highlight-label">Subtask 2</div>
+											<h3>Type Classification</h3>
+											<p class="highlight-team">Team Name / Institution</p>
+											<p class="highlight-score">Macro F1: XX.XX</p>
+											<p>Summarize the winning system for multi-label polarization type prediction here.</p>
+										</div>
+										<div class="highlight-card">
+											<div class="highlight-label">Subtask 3</div>
+											<h3>Manifestation Identification</h3>
+											<p class="highlight-team">Team Name / Institution</p>
+											<p class="highlight-score">Macro F1: XX.XX</p>
+											<p>Highlight the strongest approach for identifying manifestation categories here.</p>
+										</div>
+									</div>
 
-									<div class="table-wrapper">
+									<div class="results-note">
+										<p><strong>Editing note:</strong> The content below is structured as a ready-to-fill showcase. Replace the placeholder team names, ranks, scores, and paper links with the final participant results you want to publish.</p>
+									</div>
+
+									<hr class="major" />
+
+									<div class="results-section-header">
+										<div>
+											<h2>Subtask 1: Polarization Detection</h2>
+											<p>Binary classification leaderboard for detecting whether a post expresses polarization.</p>
+										</div>
+										<span class="score-pill">Ranked by Macro F1</span>
+									</div>
+
+									<div class="table-wrapper results-table">
 										<table>
 											<thead>
 												<tr>
-													<th>Event</th>
-													<th>Date</th>
+													<th>Rank</th>
+													<th>Team</th>
+													<th>Affiliation</th>
+													<th>Macro F1</th>
+													<th>System Paper</th>
 												</tr>
 											</thead>
 											<tbody>
-												<tr style="text-decoration: line-through;" >
-													<td>Sample data ready</td>
-													<td>8 August 2025</td>
-												</tr>
-												<tr style="text-decoration: line-through;">
-													<td>Training data ready</td>
-													<td>10 September 2025</td>
-												</tr>
-												<tr style="text-decoration: line-through;">
-													<td>Evaluation Start</td>
-													<td>25 January 2026</td>
-												</tr>
-												<tr style="text-decoration: line-through;">
-													<td>Evaluation End</td>
-													<td>5 February 2026</td>
-												</tr>
-												<tr style="text-decoration: line-through;">
-													<td>System Paper Submission Deadline</td>
-													<td>2 March 2026</td>
-												</tr>
-												<tr style="text-decoration: line-through;">
-													<td>Notification of Acceptance</td>
-													<td>9 April 2026</td>
+												<tr class="top-row">
+													<td>1</td>
+													<td><span class="team-tag">Team Alpha</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
 												</tr>
 												<tr>
-													<td>Camera-Ready Papers Due</td>
-													<td>30 April 2026</td>
+													<td>2</td>
+													<td><span class="team-tag">Team Beta</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
 												</tr>
 												<tr>
-													<td>SemEval-2026 Workshop - [co-located with ACL 2026]</td>
-													<td>July 2026</td>
+													<td>3</td>
+													<td><span class="team-tag">Team Gamma</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td><span class="team-tag">Team Delta</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
 												</tr>
 											</tbody>
 										</table>
@@ -86,25 +320,128 @@
 
 									<hr class="major" />
 
-									<h2>Task Phases Overview</h2>
+									<div class="results-section-header">
+										<div>
+											<h2>Subtask 2: Polarization Type Classification</h2>
+											<p>Leaderboard for identifying the specific polarization type labels assigned to each example.</p>
+										</div>
+										<span class="score-pill">Multi-label Evaluation</span>
+									</div>
 
-									<h3>Phase 1: Data Release (August - September 2025)</h3>
-									<p>Sample and training data will be made available to participants. This includes trial data for all three subtasks across the 22 supported languages.</p>
+									<div class="table-wrapper results-table">
+										<table>
+											<thead>
+												<tr>
+													<th>Rank</th>
+													<th>Team</th>
+													<th>Affiliation</th>
+													<th>Macro F1</th>
+													<th>System Paper</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="top-row">
+													<td>1</td>
+													<td><span class="team-tag">Team Epsilon</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td><span class="team-tag">Team Zeta</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td><span class="team-tag">Team Eta</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td><span class="team-tag">Team Theta</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 
-									<h3>Phase 2: Development Period (September 2025 - January 2026)</h3>
-									<p>Teams develop and refine their models using the provided training data. Participants can make up to 999 submissions during this phase with results visible only to their team.</p>
+									<hr class="major" />
 
-									<h3>Phase 3: Evaluation Period (January 25 - February 2, 2026)</h3>
-									<p>Official evaluation phase where teams can make up to 5 submissions with total 3 submission/day. Only the final submission will be considered official for ranking purposes.</p>
+									<div class="results-section-header">
+										<div>
+											<h2>Subtask 3: Manifestation Identification</h2>
+											<p>Leaderboard for identifying how polarization is manifested in online discourse.</p>
+										</div>
+										<span class="score-pill">Final Official Submissions</span>
+									</div>
 
-									<h3>Phase 4: Paper Submission (February 2026)</h3>
-									<p>Teams must submit system description papers to be included in the final ranking. Papers will undergo peer review.</p>
+									<div class="table-wrapper results-table">
+										<table>
+											<thead>
+												<tr>
+													<th>Rank</th>
+													<th>Team</th>
+													<th>Affiliation</th>
+													<th>Macro F1</th>
+													<th>System Paper</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="top-row">
+													<td>1</td>
+													<td><span class="team-tag">Team Iota</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td><span class="team-tag">Team Kappa</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td><span class="team-tag">Team Lambda</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td><span class="team-tag">Team Mu</span></td>
+													<td>University / Lab</td>
+													<td>XX.XX</td>
+													<td><a href="#">Paper</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 
-									<h3>Phase 5: Workshop (Summer 2026)</h3>
-									<p>Presentation of results and discussion of findings at the SemEval-2026 workshop.</p>
+									<hr class="major" />
+
+									<h2>How to Read the Leaderboards</h2>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<h3>Evaluation Scope</h3>
+											<p>Each table is intended to present final official team submissions for the corresponding POLAR subtask. The layout works well whether you want to show the top 3 teams, top 10 teams, or the full ranking.</p>
+										</div>
+										<div class="col-6 col-12-small">
+											<h3>Recommended Additions</h3>
+											<p>You can extend each table with extra columns such as precision, recall, model family, languages covered, or institution country if you want a richer benchmark-style presentation.</p>
+										</div>
+									</div>
 
 									<div class="box">
-										<p><strong>Important Reminder:</strong> To be included in the official task ranking, you <strong>MUST</strong> submit a system description paper by the deadline in February 2026.</p>
+										<p><strong>Publishing tip:</strong> If you already have the final leaderboard in a spreadsheet or GitHub table, I can also help convert this page from placeholders into the real results automatically.</p>
 									</div>
 
 								</section>
@@ -136,6 +473,7 @@
 										<li><a href="participation.html">How to Participate</a></li>
 										<li><a href="faq.html">FAQs</a></li>
 										<li><a href="dates.html">Important Dates</a></li>
+										<li><a href="results.html">Results</a></li>
 										<li><a href="resources.html">Resources</a></li>
 										<li><a href="communication.html">Communication</a></li>
 										<li><a href="organizers.html">Organizers</a></li>
