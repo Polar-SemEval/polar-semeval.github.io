@@ -68,43 +68,68 @@
 				line-height: 1.5;
 			}
 
-			.highlight-grid {
+			.summary-grid {
 				display: grid;
 				grid-template-columns: repeat(3, minmax(0, 1fr));
 				gap: 1.25em;
 				margin-bottom: 2.5em;
 			}
 
-			.highlight-card {
+			.summary-card,
+			.language-card {
 				border: solid 1px rgba(210, 215, 217, 0.75);
-				border-radius: 1em;
-				padding: 1.5em;
-				position: relative;
+				border-radius: 0.75em;
+				padding: 1.25em;
 			}
 
-			.highlight-card h3 {
-				margin-bottom: 0.75em;
+			.summary-card h3,
+			.language-card h3 {
+				font-size: 1em;
+				margin-bottom: 0.85em;
 			}
 
-			.highlight-label {
+			.compact-table table {
+				font-size: 0.9em;
+				margin: 0;
+			}
+
+			.compact-table table th,
+			.compact-table table td {
+				padding: 0.35em 0.5em;
+			}
+
+			.compact-table table th:not(:first-child),
+			.compact-table table td:not(:first-child) {
+				text-align: right;
+				white-space: nowrap;
+			}
+
+			.language-summary {
+				margin-bottom: 2.5em;
+			}
+
+			.language-summary-grid {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1em;
+			}
+
+			.language-card h3 {
 				color: #f56a6a;
-				font-size: 0.8em;
-				font-weight: 700;
-				letter-spacing: 0.12em;
+				letter-spacing: 0.08em;
 				text-transform: uppercase;
 			}
 
-			.highlight-team {
-				font-size: 1.35em;
+			.compact-table table tbody tr.rank-one td,
+			.compact-table table tbody tr.placement-highlight td {
+				background: rgba(94, 116, 255, 0.16);
 				font-weight: 700;
-				margin: 0.45em 0 0.2em;
 			}
 
-			.highlight-score {
-				color: #3d4449;
-				font-size: 1em;
-				font-weight: 600;
-				margin-bottom: 0.6em;
+			.compact-table table tbody tr.baseline-row td {
+				background: rgba(245, 106, 106, 0.07);
+				color: #6f777d;
+				font-style: italic;
 			}
 
 			.results-section-header {
@@ -201,7 +226,8 @@
 
 			@media screen and (max-width: 980px) {
 				.results-metrics,
-				.highlight-grid {
+				.summary-grid,
+				.language-summary-grid {
 					grid-template-columns: repeat(2, minmax(0, 1fr));
 				}
 			}
@@ -212,7 +238,8 @@
 				}
 
 				.results-metrics,
-				.highlight-grid {
+				.summary-grid,
+				.language-summary-grid {
 					grid-template-columns: 1fr;
 				}
 			}
@@ -260,32 +287,988 @@
 									</div>
 
 									<header class="major">
-										<h2>Top Systems at a Glance</h2>
+										<h2>Top-3 Placement Summary</h2>
 									</header>
 
-									<div class="highlight-grid">
-										<div class="highlight-card">
-											<div class="highlight-label">Subtask 1</div>
-											<h3>Polarization Detection</h3>
-											<p class="highlight-team">UTokyo Tsuruoka Lab</p>
-											<p class="highlight-score">Most first-place finishes: 8</p>
-											<p>Highest language score: yunkuang0329 on zho (0.9315).</p>
+									<p>These tables count how often each team appears in the top three positions across the language-specific leaderboards for each subtask.</p>
+
+									<div class="summary-grid">
+										<div class="summary-card compact-table">
+											<h3>Subtask 1: Polarization Detection</h3>
+											<div class="table-wrapper">
+												<table>
+													<thead><tr><th>Team</th><th>Total</th><th>1st</th><th>2nd</th><th>3rd</th></tr></thead>
+													<tbody>
+														<tr class="placement-highlight"><td>UTokyo Tsuruoka Lab</td><td>12</td><td>8</td><td>4</td><td>0</td></tr>
+														<tr class="placement-highlight"><td>NYCU-NLP</td><td>12</td><td>3</td><td>4</td><td>5</td></tr>
+														<tr class="placement-highlight"><td>PSK</td><td>8</td><td>3</td><td>2</td><td>3</td></tr>
+														<tr><td>Lingo Research Group</td><td>5</td><td>1</td><td>2</td><td>2</td></tr>
+														<tr><td>SMASH</td><td>5</td><td>1</td><td>2</td><td>2</td></tr>
+														<tr><td>taien</td><td>3</td><td>1</td><td>1</td><td>1</td></tr>
+														<tr><td>yunkuang0329</td><td>3</td><td>1</td><td>0</td><td>2</td></tr>
+														<tr><td>OZemi</td><td>2</td><td>1</td><td>0</td><td>1</td></tr>
+														<tr><td>StanceLab</td><td>2</td><td>0</td><td>2</td><td>0</td></tr>
+														<tr><td>MKJ</td><td>2</td><td>0</td><td>1</td><td>1</td></tr>
+														<tr><td>Tralaleros</td><td>2</td><td>0</td><td>0</td><td>2</td></tr>
+														<tr><td>mdok-style</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+														<tr><td>PhatThachDau</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+														<tr><td>Sagarmatha</td><td>1</td><td>1</td><td>0</td><td>0</td></tr>
+														<tr><td>CUET-823</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>danielkhir</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>JAT</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>Projet Fil Rouge 821</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>PolaFusion</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+														<tr><td>Semantic Vectors</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+														<tr><td>UMUSP</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+													</tbody>
+												</table>
+											</div>
 										</div>
-										<div class="highlight-card">
-											<div class="highlight-label">Subtask 2</div>
-											<h3>Polarization Type Classification</h3>
-											<p class="highlight-team">UTokyo Tsuruoka Lab</p>
-											<p class="highlight-score">Most first-place finishes: 6</p>
-											<p>Highest language score: NYCU-NLP on zho (0.8436).</p>
+										<div class="summary-card compact-table">
+											<h3>Subtask 2: Polarization Type Classification</h3>
+											<div class="table-wrapper">
+												<table>
+													<thead><tr><th>Team</th><th>Total</th><th>1st</th><th>2nd</th><th>3rd</th></tr></thead>
+													<tbody>
+														<tr class="placement-highlight"><td>NYCU-NLP</td><td>14</td><td>5</td><td>5</td><td>4</td></tr>
+														<tr class="placement-highlight"><td>SMASH</td><td>14</td><td>4</td><td>4</td><td>6</td></tr>
+														<tr class="placement-highlight"><td>UTokyo Tsuruoka Lab</td><td>12</td><td>6</td><td>5</td><td>1</td></tr>
+														<tr><td>Lingo Research Group</td><td>6</td><td>2</td><td>1</td><td>3</td></tr>
+														<tr><td>CoPol</td><td>5</td><td>3</td><td>2</td><td>0</td></tr>
+														<tr><td>Sagarmatha</td><td>3</td><td>0</td><td>1</td><td>2</td></tr>
+														<tr><td>NASIM LAB</td><td>2</td><td>1</td><td>0</td><td>1</td></tr>
+														<tr><td>PolaFusion</td><td>2</td><td>1</td><td>0</td><td>1</td></tr>
+														<tr><td>AIvengers</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>ILA Polar</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>maggam</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>Stochastic Gradient Descenders</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>mdok-style</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+														<tr><td>MSqrd</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+														<tr><td>YNU-HPCC</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+														<tr><td>yunkuang0329</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+													</tbody>
+												</table>
+											</div>
 										</div>
-										<div class="highlight-card">
-											<div class="highlight-label">Subtask 3</div>
-											<h3>Manifestation Identification</h3>
-											<p class="highlight-team">SMASH</p>
-											<p class="highlight-score">Most first-place finishes: 9</p>
-											<p>Highest language score: NYCU-NLP on urd (0.8213).</p>
+										<div class="summary-card compact-table">
+											<h3>Subtask 3: Manifestation Identification</h3>
+											<div class="table-wrapper">
+												<table>
+													<thead><tr><th>Team</th><th>Total</th><th>1st</th><th>2nd</th><th>3rd</th></tr></thead>
+													<tbody>
+														<tr class="placement-highlight"><td>SMASH</td><td>16</td><td>9</td><td>4</td><td>3</td></tr>
+														<tr class="placement-highlight"><td>NYCU-NLP</td><td>11</td><td>7</td><td>3</td><td>1</td></tr>
+														<tr class="placement-highlight"><td>PolaFusion</td><td>7</td><td>0</td><td>2</td><td>5</td></tr>
+														<tr><td>Sagarmatha</td><td>4</td><td>2</td><td>0</td><td>2</td></tr>
+														<tr><td>happynewyear</td><td>4</td><td>0</td><td>4</td><td>0</td></tr>
+														<tr><td>AIvengers</td><td>4</td><td>0</td><td>0</td><td>4</td></tr>
+														<tr><td>OZemi</td><td>2</td><td>0</td><td>2</td><td>0</td></tr>
+														<tr><td>YEZE</td><td>2</td><td>0</td><td>0</td><td>2</td></tr>
+														<tr><td>Aaronbundi</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>maggam</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>suuii</td><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+														<tr><td>Lingo Research Group</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+													</tbody>
+												</table>
+											</div>
 										</div>
 									</div>
+
+									<hr class="major" />
+
+									<div class="results-section-header">
+										<div>
+											<h2>Top Three Systems by Language</h2>
+											<p>Each panel lists the top three official systems for every language, with the POLAR baseline included for quick comparison.</p>
+										</div>
+										<span class="score-pill">Top 3 + baseline</span>
+									</div>
+
+									<details class="leaderboard-details language-summary">
+										<summary><strong>Subtask 1: Polarization Detection</strong> <span>22 languages</span></summary>
+										<div class="language-summary-grid">
+											<div class="language-card compact-table">
+												<h3>amh</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>PSK</td><td>0.8002</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.7954</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.7928</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7151</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>arb</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8488</td></tr>
+															<tr><td>PSK</td><td>0.8484</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8427</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7957</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ben</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8625</td></tr>
+															<tr><td>CUET-823</td><td>0.8582</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8538</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.8528</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>deu</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.7608</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.7531</td></tr>
+															<tr><td>yunkuang0329</td><td>0.7465</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.6714</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>eng</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8252</td></tr>
+															<tr><td>danielkhir</td><td>0.8189</td></tr>
+															<tr><td>PSK</td><td>0.8177</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7802</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>fas</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="baseline-row"><td>baseline</td><td>0.8424</td></tr>
+															<tr class="rank-one"><td>OZemi</td><td>0.8348</td></tr>
+															<tr><td>taien</td><td>0.8314</td></tr>
+															<tr><td>MKJ</td><td>0.8308</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>hau</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>PhatThachDau</td><td>0.8336</td></tr>
+															<tr><td>Projet Fil Rouge 821</td><td>0.8324</td></tr>
+															<tr><td>OZemi</td><td>0.8313</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7753</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>hin</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>PSK</td><td>0.8236</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.8212</td></tr>
+															<tr><td>Tralaleros</td><td>0.8178</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7379</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ita</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>mdok-style</td><td>0.7303</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.6773</td></tr>
+															<tr><td>StanceLab</td><td>0.6720</td></tr>
+															<tr><td>PolaFusion</td><td>0.6714</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>khm</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.7744</td></tr>
+															<tr><td>StanceLab</td><td>0.7610</td></tr>
+															<tr><td>Semantic Vectors</td><td>0.7553</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.6592</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>mya</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>taien</td><td>0.8913</td></tr>
+															<tr><td>MKJ</td><td>0.8874</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8868</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.8210</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>nep</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.9236</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.9180</td></tr>
+															<tr><td>SMASH</td><td>0.9136</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.8798</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ori</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8255</td></tr>
+															<tr><td>JAT</td><td>0.8157</td></tr>
+															<tr><td>UMUSP</td><td>0.8137</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7765</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>pan</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8257</td></tr>
+															<tr><td>PSK</td><td>0.8121</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8107</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7898</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>pol</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>Lingo Research Group</td><td>0.8431</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8350</td></tr>
+															<tr><td>PSK</td><td>0.8348</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7241</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>rus</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8303</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8232</td></tr>
+															<tr><td>yunkuang0329</td><td>0.8138</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7457</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>spa</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8030</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.7996</td></tr>
+															<tr><td>SMASH</td><td>0.7976</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7266</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>swa</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>PSK</td><td>0.8113</td></tr>
+															<tr><td>SMASH</td><td>0.8098</td></tr>
+															<tr><td>taien</td><td>0.7985</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7571</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>tel</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>Sagarmatha</td><td>0.9053</td></tr>
+															<tr><td>SMASH</td><td>0.9006</td></tr>
+															<tr><td>Tralaleros</td><td>0.8968</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.644</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>tur</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.8329</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.8303</td></tr>
+															<tr><td>PSK</td><td>0.8092</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.6957</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>urd</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.8196</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8169</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.8156</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7890</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>zho</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>yunkuang0329</td><td>0.9315</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.9289</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.9273</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.8691</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</details>
+
+									<details class="leaderboard-details language-summary">
+										<summary><strong>Subtask 2: Polarization Type Classification</strong> <span>22 languages</span></summary>
+										<div class="language-summary-grid">
+											<div class="language-card compact-table">
+												<h3>amh</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>PolaFusion</td><td>0.6697</td></tr>
+															<tr><td>CoPol</td><td>0.6579</td></tr>
+															<tr><td>SMASH</td><td>0.6495</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.3716</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>arb</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.6698</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.6678</td></tr>
+															<tr><td>SMASH</td><td>0.6581</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4855</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ben</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>Lingo Research Group</td><td>0.4216</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.4007</td></tr>
+															<tr><td>SMASH</td><td>0.3780</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.2887</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>deu</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.6200</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.6157</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.5994</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4078</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>eng</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.5322</td></tr>
+															<tr><td>Stochastic Gradient Descenders</td><td>0.5157</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.5135</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.3333</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>fas</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.6438</td></tr>
+															<tr><td>ILA Polar</td><td>0.6207</td></tr>
+															<tr><td>MSqrd</td><td>0.6088</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4626</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>hau</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.4796</td></tr>
+															<tr><td>SMASH</td><td>0.4535</td></tr>
+															<tr><td>Sagarmatha</td><td>0.4269</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.2038</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>hin</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.8073</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.8013</td></tr>
+															<tr><td>YNU-HPCC</td><td>0.7932</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7911</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ita</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.5505</td></tr>
+															<tr><td>maggam</td><td>0.5375</td></tr>
+															<tr><td>yunkuang0329</td><td>0.4836</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.3759</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>khm</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.7048</td></tr>
+															<tr><td>SMASH</td><td>0.7018</td></tr>
+															<tr><td>PolaFusion</td><td>0.6986</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.6268</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>mya</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NASIM LAB</td><td>0.7474</td></tr>
+															<tr><td>SMASH</td><td>0.7358</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.7079</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4772</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>nep</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.8104</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.8047</td></tr>
+															<tr><td>mdok-style</td><td>0.8026</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7219</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ori</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.6027</td></tr>
+															<tr><td>AIvengers</td><td>0.5938</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.5779</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.5600</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>pan</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.5526</td></tr>
+															<tr><td>CoPol</td><td>0.5258</td></tr>
+															<tr><td>Sagarmatha</td><td>0.5243</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.3650</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>pol</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>UTokyo Tsuruoka Lab</td><td>0.6497</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.6400</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.6253</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4491</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>rus</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>CoPol</td><td>0.6455</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.6295</td></tr>
+															<tr><td>SMASH</td><td>0.6186</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.5904</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>spa</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.6806</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.6735</td></tr>
+															<tr><td>SMASH</td><td>0.6726</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.5935</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>swa</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.5694</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.5397</td></tr>
+															<tr><td>NASIM LAB</td><td>0.5360</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4417</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>tel</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>CoPol</td><td>0.5734</td></tr>
+															<tr><td>Sagarmatha</td><td>0.4647</td></tr>
+															<tr><td>SMASH</td><td>0.4578</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.3145</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>tur</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>CoPol</td><td>0.7767</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.6524</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.6462</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4708</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>urd</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>Lingo Research Group</td><td>0.7978</td></tr>
+															<tr><td>SMASH</td><td>0.7897</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.7889</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.7127</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>zho</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.8436</td></tr>
+															<tr><td>UTokyo Tsuruoka Lab</td><td>0.8350</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.8250</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.6697</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</details>
+
+									<details class="leaderboard-details language-summary">
+										<summary><strong>Subtask 3: Manifestation Identification</strong> <span>18 languages</span></summary>
+										<div class="language-summary-grid">
+											<div class="language-card compact-table">
+												<h3>amh</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.5789</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.5587</td></tr>
+															<tr><td>AIvengers</td><td>0.5535</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4433</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>arb</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.6456</td></tr>
+															<tr><td>SMASH</td><td>0.6413</td></tr>
+															<tr><td>YEZE</td><td>0.6097</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.3902</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ben</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.2805</td></tr>
+															<tr><td>happynewyear</td><td>0.2554</td></tr>
+															<tr><td>PolaFusion</td><td>0.2493</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.0868</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>deu</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.5176</td></tr>
+															<tr><td>maggam</td><td>0.5153</td></tr>
+															<tr><td>SMASH</td><td>0.5126</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.3485</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>eng</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>Sagarmatha</td><td>0.5105</td></tr>
+															<tr><td>happynewyear</td><td>0.5071</td></tr>
+															<tr><td>SMASH</td><td>0.5070</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4100</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>fas</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.4932</td></tr>
+															<tr><td>OZemi</td><td>0.4764</td></tr>
+															<tr><td>Sagarmatha</td><td>0.4611</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.2004</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>hau</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="baseline-row"><td>baseline</td><td>0.7456</td></tr>
+															<tr class="rank-one"><td>Sagarmatha</td><td>0.2072</td></tr>
+															<tr><td>OZemi</td><td>0.2058</td></tr>
+															<tr><td>PolaFusion</td><td>0.2041</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>hin</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.7709</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.7704</td></tr>
+															<tr><td>PolaFusion</td><td>0.7587</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.2348</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>khm</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="baseline-row"><td>baseline</td><td>0.6095</td></tr>
+															<tr class="rank-one"><td>SMASH</td><td>0.4372</td></tr>
+															<tr><td>PolaFusion</td><td>0.3998</td></tr>
+															<tr><td>AIvengers</td><td>0.3774</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>nep</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.7127</td></tr>
+															<tr><td>SMASH</td><td>0.7118</td></tr>
+															<tr><td>Lingo Research Group</td><td>0.6685</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.1314</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>ori</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="baseline-row"><td>baseline</td><td>0.3841</td></tr>
+															<tr class="rank-one"><td>SMASH</td><td>0.3296</td></tr>
+															<tr><td>happynewyear</td><td>0.3280</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.2973</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>pan</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.5441</td></tr>
+															<tr><td>SMASH</td><td>0.5407</td></tr>
+															<tr><td>AIvengers</td><td>0.5290</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.4561</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>spa</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.5409</td></tr>
+															<tr><td>NYCU-NLP</td><td>0.5198</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.5088</td></tr>
+															<tr><td>PolaFusion</td><td>0.5065</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>swa</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>SMASH</td><td>0.5840</td></tr>
+															<tr><td>Aaronbundi</td><td>0.5830</td></tr>
+															<tr><td>AIvengers</td><td>0.5652</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.2205</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>tel</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="baseline-row"><td>baseline</td><td>0.6738</td></tr>
+															<tr class="rank-one"><td>SMASH</td><td>0.4445</td></tr>
+															<tr><td>PolaFusion</td><td>0.4293</td></tr>
+															<tr><td>Sagarmatha</td><td>0.4244</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>tur</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="baseline-row"><td>baseline</td><td>0.7693</td></tr>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.5381</td></tr>
+															<tr><td>happynewyear</td><td>0.5374</td></tr>
+															<tr><td>PolaFusion</td><td>0.5151</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>urd</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.8213</td></tr>
+															<tr><td>SMASH</td><td>0.8211</td></tr>
+															<tr><td>YEZE</td><td>0.8152</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.5316</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="language-card compact-table">
+												<h3>zho</h3>
+												<div class="table-wrapper">
+													<table>
+														<thead><tr><th>Team</th><th>Score</th></tr></thead>
+														<tbody>
+															<tr class="rank-one"><td>NYCU-NLP</td><td>0.7191</td></tr>
+															<tr><td>suuii</td><td>0.7004</td></tr>
+															<tr><td>SMASH</td><td>0.6774</td></tr>
+															<tr class="baseline-row"><td>baseline</td><td>0.0000</td></tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</details>
 
 									<div class="results-note">
 										<p><strong>Important:</strong> If your team is missing from the leaderboard, it means the system description paper was not submitted. Please contact the organizers by email if you did submit the system description paper but your name is not displayed.</p>
