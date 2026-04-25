@@ -32,14 +32,14 @@
 								</header>
 
 							<!-- Content -->
-							<section>
+							<section class="faq-content">
 								<header class="main">
 								  <h1>Frequently Asked Questions</h1>
 								</header>
 							  
 								<style>
 									/* ===== Accordion (Details) Styling for POLAR Theme ===== */
-									details {
+									.faq-content details {
 									  background: #fafafa;
 									  border-radius: 8px;
 									  margin-bottom: 10px;
@@ -48,13 +48,13 @@
 									  transition: all 0.3s ease;
 									}
 								
-									details:hover {
+									.faq-content details:hover {
 									  background: #fff;
 									  border-color: #e57373;
 									  box-shadow: 0 1px 4px rgba(229, 115, 115, 0.1);
 									}
 								
-									summary {
+									.faq-content summary {
 									  font-weight: 600;
 									  color: #3d4042;
 									  cursor: pointer;
@@ -63,12 +63,12 @@
 									  padding-right: 1.4em;
 									}
 								
-									summary::marker {
+									.faq-content summary::marker {
 									  display: none;
 									}
 								
 									/* Custom arrow */
-									summary::after {
+									.faq-content summary::after {
 									  content: "›";
 									  position: absolute;
 									  right: 0;
@@ -78,25 +78,25 @@
 									  font-weight: bold;
 									}
 								
-									details[open] summary::after {
+									.faq-content details[open] summary::after {
 									  transform: rotate(270deg);
 									}
 								
 									/* Smooth accordion animation */
-									details > *:not(summary) {
+									.faq-content details > *:not(summary) {
 									  overflow: hidden;
 									  opacity: 0;
 									  max-height: 0;
 									  transition: all 0.35s ease;
 									}
 								
-									details[open] > *:not(summary) {
+									.faq-content details[open] > *:not(summary) {
 									  opacity: 1;
 									  max-height: 1000px;
 									  margin-top: 0.6em;
 									}
 								
-									h2 {
+									.faq-content h2 {
 									  color: #3d4042;
 									  margin-top: 2em;
 									  font-size: 1.4rem;
@@ -105,19 +105,19 @@
 									  padding-bottom: 0.2em;
 									}
 								
-									hr.major {
+									.faq-content hr.major {
 									  margin: 2em 0;
 									  border: none;
 									  border-top: 2px solid #e57373;
 									  width: 60%;
 									}
 								
-									a {
+									.faq-content a {
 									  color: #e57373;
 									  text-decoration: underline;
 									}
 								
-									a:hover {
+									.faq-content a:hover {
 									  color: #c94f4f;
 									}
 								  </style>
