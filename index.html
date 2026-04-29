@@ -17,6 +17,14 @@
 			#banner .content {
 				text-align: center;
 			}
+			.task-intro-list {
+				display: inline-block;
+				margin: 0 0 1.5em 0;
+				text-align: left;
+			}
+			.task-intro-note {
+				margin-top: 0;
+			}
 			.centered-image {
 				display: block; /* Makes the image a block-level element */
 				margin: 0 auto; /* Centers the block-level image horizontally */
@@ -70,7 +78,16 @@
 										</header>
 										<h3>Task Introduction</h3>
 										<p>
-											POLAR @ SemEval-2026 introduces the first shared task dedicated to detecting and analyzing online polarization across multilingual, multicultural, and multievent social media discourse. Online polarization reflects sharp divisions and hostility between social, political, religious, ethnic, gender-based, or other identity groups, and can contribute to hate speech, offensive discourse, reduced dialogue, and social fragmentation. The task supports research on early detection and deeper understanding of polarized content through three subtasks: <strong>Polarization Detection</strong>, <strong>Polarization Type Classification</strong>, and <strong>Polarization Manifestation Identification</strong>. Using data from news websites, Reddit, blogs, Bluesky, and regional forums, the task covers events such as elections, conflicts, gender rights, migration, and other public debates, with all subtasks evaluated using Macro F1 to encourage robust performance across languages and cultural contexts.
+											POLAR @ SemEval-2026 introduces the first shared task dedicated to detecting and analyzing online polarization across multilingual, multicultural, and multievent social media discourse.
+										</p>
+										<ul class="task-intro-list">
+											<li><strong>Goal:</strong> identify polarized content that reflects sharp divisions or hostility between social, political, religious, ethnic, gender-based, or other identity groups.</li>
+											<li><strong>Subtasks:</strong> participants may compete in <strong>Polarization Detection</strong>, <strong>Polarization Type Classification</strong>, and <strong>Polarization Manifestation Identification</strong>.</li>
+											<li><strong>Data:</strong> the task uses posts from news websites, Reddit, blogs, Bluesky, and regional forums, covering events such as elections, conflicts, gender rights, migration, and other public debates.</li>
+											<li><strong>Evaluation:</strong> all subtasks are evaluated using Macro F1 to encourage robust performance across languages and cultural contexts.</li>
+										</ul>
+										<p class="task-intro-note">
+											For more details about the exact subtasks definitions, refer to the <a href="tasks.html"><strong>Subtasks Page</strong></a>.
 										</p>
 										<p>	
 											<strong>Languages Covered</strong> 
