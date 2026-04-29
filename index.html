@@ -35,6 +35,36 @@
 				border-radius: 1.15em;
 				padding: 1.75em;
 			}
+			.bibtex-tabs {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75em;
+				margin-bottom: 1em;
+			}
+			.bibtex-tab {
+				box-shadow: inset 0 0 0 2px #f56a6a;
+			}
+			.bibtex-tab.active {
+				background-color: #f56a6a;
+				box-shadow: none;
+				color: #ffffff !important;
+			}
+			.bibtex-panel {
+				display: none;
+			}
+			.bibtex-panel.active {
+				display: block;
+			}
+			.bibtex-panel pre {
+				background: rgba(230, 235, 237, 0.35);
+				border: solid 1px rgba(210, 215, 217, 0.75);
+				border-radius: 0.75em;
+				font-size: 0.85em;
+				line-height: 1.55;
+				overflow-x: auto;
+				padding: 1.25em;
+				white-space: pre;
+			}
 			@media screen and (max-width: 480px) {
 				.actions-column {
 					flex-direction: column;
@@ -198,6 +228,38 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
+										<h2>Citation</h2>
+									</header>
+									<div class="bibtex-tabs" role="tablist" aria-label="BibTeX citations">
+										<button type="button" class="button bibtex-tab active" data-bibtex-target="dataset-bibtex" role="tab" aria-selected="true">Dataset paper BibTeX</button>
+										<button type="button" class="button bibtex-tab" data-bibtex-target="task-bibtex" role="tab" aria-selected="false">Task description BibTeX</button>
+									</div>
+									<div id="dataset-bibtex" class="bibtex-panel active" role="tabpanel">
+<pre><code>@misc{naseem2026polarbenchmarkmultilingualmulticultural,
+      title={POLAR: A Benchmark for Multilingual, Multicultural, and Multi-Event Online Polarization},
+      author={Usman Naseem and Robert Geislinger and Juan Ren and Sarah Kohail and Rudy Garrido Veliz and P Sam Sahil and Yiran Zhang and Marco Antonio Stranisci and Idris Abdulmumin and Özge Alacam and Cengiz Acartürk and Aisha Jabr and Saba Anwar and Abinew Ali Ayele and Simona Frenda and Alessandra Teresa Cignarella and Elena Tutubalina and Oleg Rogov and Aung Kyaw Htet and Xintong Wang and Surendrabikram Thapa and Kritesh Rauniyar and Tanmoy Chakraborty and Arfeen Zeeshan and Dheeraj Kodati and Satya Keerthi and Sahar Moradizeyveh and Firoj Alam and Arid Hasan and Syed Ishtiaque Ahmed and Ye Kyaw Thu and Shantipriya Parida and Ihsan Ayyub Qazi and Lilian Wanzare and Nelson Odhiambo Onyango and Clemencia Siro and Jane Wanjiru Kimani and Ibrahim Said Ahmad and Adem Chanie Ali and Martin Semmann and Chris Biemann and Shamsuddeen Hassan Muhammad and Seid Muhie Yimam},
+      year={2026},
+      eprint={2505.20624},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.20624},
+}</code></pre>
+									</div>
+									<div id="task-bibtex" class="bibtex-panel" role="tabpanel">
+<pre><code>@inproceedings{naseem-etal-2026-polar,
+    title     = {{SemEval-2026 Task 9: Detecting Multilingual, Multicultural and Multievent Online Polarization}},
+    author    = {Naseem, Usman and Geislinger, Robert and Ren, Juan and Kohail, Sarah and Garrido Veliz, Rudy and Sam Sahil, P and Zhang, Yiran and Stranisci, Marco Antonio and Abdulmumin, Idris and Alacam, Özge and Acarürk, Cengiz and Jabr, Aisha and Anwar, Saba and Ayele, Abinew Ali and Tutubalina, Elena and Htet, Aung Kyaw and Wang, Xintong and Thapa, Surendrabikram and Chakraborty, Tanmoy and Kodati, Dheeraj and Moradizeyveh, Sahar and Alam, Firoj and Thu, Ye Kyaw and Parida, Shantipriya and Qazi, Ihsan Ayyub and Onyango, Nelson Odhiambo and Siro, Clemencia and Ahmad, Ibrahim Said and Wanzare, Lilian and Ali, Adem Chanie and Semmann, Martin and Biemann, Chris and Muhammad, Shamsuddeen Hassan and Yimam, Seid Muhie},
+    booktitle = {{Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)}},
+    year      = {2026},
+    publisher = {{Association for Computational Linguistics}},
+    address = {{San Diego, CA, USA}}
+}</code></pre>
+									</div>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
 										<h2>Latest Announcements</h2>
 									</header>
 									
@@ -315,6 +377,28 @@
 
 									// Load announcements when page loads
 									document.addEventListener('DOMContentLoaded', loadLatestAnnouncements);
+									</script>
+									<script>
+									document.addEventListener('DOMContentLoaded', function () {
+										const tabs = Array.from(document.querySelectorAll('.bibtex-tab'));
+										const panels = Array.from(document.querySelectorAll('.bibtex-panel'));
+
+										tabs.forEach(function (tab) {
+											tab.addEventListener('click', function () {
+												const targetId = tab.getAttribute('data-bibtex-target');
+
+												tabs.forEach(function (item) {
+													const isActive = item === tab;
+													item.classList.toggle('active', isActive);
+													item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+												});
+
+												panels.forEach(function (panel) {
+													panel.classList.toggle('active', panel.id === targetId);
+												});
+											});
+										});
+									});
 									</script>
 
 								</section>
