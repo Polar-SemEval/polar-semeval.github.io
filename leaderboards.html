@@ -499,6 +499,31 @@
 					justify-content: flex-start;
 				}
 			}
+
+			@media screen and (min-width: 981px) and (max-width: 1280px) {
+				#sidebar {
+					box-shadow: none;
+					height: auto;
+					left: auto;
+					margin-left: 0 !important;
+					position: relative;
+					top: auto;
+				}
+
+				#sidebar > .inner {
+					height: auto;
+					overflow: visible;
+					position: relative;
+				}
+
+				#sidebar .toggle {
+					display: none;
+				}
+
+				body.is-preload #sidebar {
+					display: block;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
