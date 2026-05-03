@@ -191,7 +191,7 @@
 
 
 <details>
-<summary><strong>eng</strong> (44 submissions)</summary>
+<summary><strong>eng</strong> (45 submissions)</summary>
 
 
 | rank | Username | score |
@@ -200,47 +200,48 @@
 | 2 | danielkhir | 0.8189 |
 | 3 | PSK | 0.8177 |
 | 4 | NYCU-NLP | 0.8172 |
-| 5 | yunkuang0329 | 0.8153 |
-| 6 | AIvengers | 0.8128 |
-| 7 | Lingo Research Group | 0.8098 |
-| 8 | PhatThachDau | 0.8092 |
-| 9 | The Argonauts | 0.8082 |
-| 10 | Sagarmatha | 0.8081 |
-| 11 | mdok-style | 0.8058 |
-| 12 | PolarMind | 0.8036 |
-| 13 | StanceLab | 0.8008 |
-| 14 | Semantic Vectors | 0.7982 |
-| 15 | DigiS-FBK | 0.7981 |
-| 16 | Tralaleros | 0.7973 |
-| 17 | SMASH | 0.7968 |
-| 18 | MKJ | 0.7958 |
-| 19 | MINDS | 0.7943 |
-| 20 | nlp_cimat | 0.7939 |
-| 21 | PolaFusion | 0.7913 |
-| 22 | MoMo | 0.7913 |
-| 23 | aatman | 0.7905 |
-| 24 | Aaronbundi | 0.7901 |
-| 25 | UMUSP | 0.7875 |
-| 26 | NIT-Agartala-NLP-Team | 0.7862 |
-| 27 | JAT | 0.7857 |
-| 28 | Projet Fil Rouge 821 | 0.7854 |
-| 29 | taien | 0.7853 |
-| 30 | joshualee2 | 0.7846 |
-| 31 | TranTranUIT | 0.7845 |
-| 32 | Seals-NLP | 0.7832 |
-| 33 | YEZE | 0.7806 |
-| 34 | wangkongqiang | 0.7805 |
+| 5 | UIT Polar | 0.8162 |
+| 6 | yunkuang0329 | 0.8153 |
+| 7 | AIvengers | 0.8128 |
+| 8 | Lingo Research Group | 0.8098 |
+| 9 | PhatThachDau | 0.8092 |
+| 10 | The Argonauts | 0.8082 |
+| 11 | Sagarmatha | 0.8081 |
+| 12 | mdok-style | 0.8058 |
+| 13 | PolarMind | 0.8036 |
+| 14 | StanceLab | 0.8008 |
+| 15 | Semantic Vectors | 0.7982 |
+| 16 | DigiS-FBK | 0.7981 |
+| 17 | Tralaleros | 0.7973 |
+| 18 | SMASH | 0.7968 |
+| 19 | MKJ | 0.7958 |
+| 20 | MINDS | 0.7943 |
+| 21 | nlp_cimat | 0.7939 |
+| 22 | PolaFusion | 0.7913 |
+| 23 | MoMo | 0.7913 |
+| 24 | aatman | 0.7905 |
+| 25 | Aaronbundi | 0.7901 |
+| 26 | UMUSP | 0.7875 |
+| 27 | NIT-Agartala-NLP-Team | 0.7862 |
+| 28 | JAT | 0.7857 |
+| 29 | Projet Fil Rouge 821 | 0.7854 |
+| 30 | taien | 0.7853 |
+| 31 | joshualee2 | 0.7846 |
+| 32 | TranTranUIT | 0.7845 |
+| 33 | Seals-NLP | 0.7832 |
+| 34 | YEZE | 0.7806 |
+| 35 | wangkongqiang | 0.7805 |
 | -- | POLAR Baseline | 0.7802 |
-| 35 | MSqrd | 0.7743 |
-| 36 | The Counterfactuals | 0.7724 |
-| 37 | DUTH | 0.7708 |
-| 38 | ILab-NLP | 0.7681 |
-| 39 | BITS, Pilani | 0.7664 |
-| 40 | knix123 | 0.7652 |
-| 41 | OZemi | 0.7636 |
-| 42 | PolarizedTeam | 0.7458 |
-| 43 | maggam | 0.7084 |
-| 44 | zhangpeng | 0.6882 |
+| 36 | MSqrd | 0.7743 |
+| 37 | The Counterfactuals | 0.7724 |
+| 38 | DUTH | 0.7708 |
+| 39 | ILab-NLP | 0.7681 |
+| 40 | BITS, Pilani | 0.7664 |
+| 41 | knix123 | 0.7652 |
+| 42 | OZemi | 0.7636 |
+| 43 | PolarizedTeam | 0.7458 |
+| 44 | maggam | 0.7084 |
+| 45 | zhangpeng | 0.6882 |
 </details>
 
 
